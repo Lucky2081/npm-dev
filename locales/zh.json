@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "home": "首页",
+    "arena": "擂台",
+    "framework": "技术框架",
+    "faq": "常见问题",
+    "about": "关于我们",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "badges": "开源 • 已验证 • 可复现",
+    "title": "AI实战，谁是最佳？",
+    "subtitle": "我们实测它们，只推荐最佳实践",
+    "description": "在真实场景下寻找并验证AI落地的最佳实践，不仅开源代码，也开源可复刻的实践路径",
+    "ctaPrimary": "查找AI方案",
+    "ctaSecondary": "加入开发者"
+  },
+  "stats": {
+    "blueprints": "50+",
+    "blueprintsLabel": "已验证方案",
+    "industries": "12",
+    "industriesLabel": "行业覆盖",
+    "accuracy": "95%+",
+    "accuracyLabel": "平均准确率"
+  },
+  "industries": {
+    "title": "按行业探索",
+    "subtitle": "覆盖6个行业，14+个已验证AI解决方案",
+    "finance": "金融",
+    "retail": "零售",
+    "education": "教育",
+    "healthcare": "医疗",
+    "energy": "能源",
+    "manufacturing": "制造"
+  },
+  "approach": {
+    "title": "真实场景 • 公平竞争 • 单一最佳",
+    "subtitle": "通过\"擂台\"机制，我们在真实业务场景中公平测试AI实践，只推荐验证过的最佳实践",
+    "step1": {
+      "title": "定义真实场景",
+      "description": "选择具体的真实问题并建立明确的成功标准和评估框架。例如：自动化财务报告、智能客服问答"
+    },
+    "step2": {
+      "title": "最佳实践竞争",
+      "description": "多种解决方案在相同条件下使用真实数据和统一标准进行测试。确保公平测试和可比较的结果"
+    },
+    "step3": {
+      "title": "验证并推荐最佳",
+      "description": "基于测试结果选择最优解决方案，提供完整代码和部署指南。包括团队建设、性能报告和成本分析 - 真实场景中每个关键要素"
+    }
+  },
+  "blueprintIncludes": {
+    "title": "每个方案包含",
+    "subtitle": "完整的生产级解决方案，立即可部署",
+    "liveDemo": {
+      "title": "在线演示",
+      "description": "在线体验实际效果，验证业务适配性"
+    },
+    "sourceCode": {
+      "title": "完整源代码",
+      "description": "开源代码，可审计、可定制，支持私有化部署"
+    },
+    "deploymentGuide": {
+      "title": "部署指南",
+      "description": "详细的实施文档和架构指南，1-3天完成部署"
+    },
+    "performanceReport": {
+      "title": "性能报告",
+      "description": "真实测试数据，包括准确率、响应时间、资源使用"
+    }
+  },
+  "caseStudies": {
+    "title": "案例研究",
+    "subtitle": "真实公司，真实成果"
+  },
+  "trust": {
+    "title": "为什么信任RWAI",
+    "verified": {
+      "title": "已验证",
+      "description": "所有解决方案在真实场景中测试，数据可追溯"
+    },
+    "expertTeam": {
+      "title": "专家团队",
+      "description": "来自清华、牛津和世界500强企业的AI专家"
+    },
+    "replicable": {
+      "title": "可复现",
+      "description": "所有解决方案在真实场景中测试，实践可追溯"
+    }
+  },
+  "finalCta": {
+    "title": "准备找到您的AI解决方案？",
+    "description": "浏览已验证的AI方案，或加入开发者社区共同贡献",
+    "browse": "浏览方案",
+    "github": "GitHub",
+    "beta": "目前处于测试阶段，欢迎您的反馈和建议"
+  },
+  "arena": {
+    "title": "AI最佳实践擂台",
+    "subtitle": "发现并验证最佳AI实施方案",
+    "allCategories": "所有类别",
+    "allIndustries": "所有行业",
+    "filterByCategory": "按类别筛选",
+    "filterByIndustry": "按行业筛选",
+    "sortBy": "排序方式",
+    "sortOptions": {
+      "quality": "质量",
+      "efficiency": "效率",
+      "cost": "成本",
+      "trust": "信任",
+      "stars": "GitHub星标"
+    },
+    "viewDetails": "查看详情",
+    "verified": "已验证",
+    "inArena": "竞技中"
+  },
+  "categories": {
+    "service": "服务",
+    "management": "管理",
+    "marketing": "营销",
+    "riskControl": "风控",
+    "operations": "运营",
+    "general": "通用"
+  },
+  "footer": {
+    "brand": "RWAI Arena",
+    "brandDescription": "真实AI竞技场 - 为真实场景寻找最佳AI实践",
+    "platform": "平台",
+    "arena": "擂台",
+    "framework": "技术框架",
+    "faq": "常见问题",
+    "community": "社区",
+    "github": "GitHub",
+    "about": "关于我们",
+    "contactUs": "联系我们",
+    "legal": "法律",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "copyright": "© 2025 RWAI. 保留所有权利",
+    "followOnGitHub": "在 GitHub 上关注"
+  }
+}

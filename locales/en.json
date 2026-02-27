@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "home": "Home",
+    "arena": "Arena",
+    "framework": "Framework",
+    "faq": "FAQ",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badges": "Open Source • Verified • Replicable",
+    "title": "Which AI Actually Works?",
+    "subtitle": "We test them. Recommend only the Best Practice.",
+    "description": "Test AI practice in real-world scenarios. Verify what works. Locate only the best-proven practice and open-source everything - not only the code, but the whole practice you need in real-world.",
+    "ctaPrimary": "Find AI Solutions",
+    "ctaSecondary": "Join as Developer"
+  },
+  "stats": {
+    "blueprints": "50+",
+    "blueprintsLabel": "Verified Blueprints",
+    "industries": "12",
+    "industriesLabel": "Industries",
+    "accuracy": "95%+",
+    "accuracyLabel": "Avg. Accuracy"
+  },
+  "industries": {
+    "title": "Explore by Industry",
+    "subtitle": "Covering 6 industries, 14+ verified AI solutions",
+    "finance": "Finance",
+    "retail": "Retail",
+    "education": "Education",
+    "healthcare": "Healthcare",
+    "energy": "Energy",
+    "manufacturing": "Manufacturing"
+  },
+  "approach": {
+    "title": "Real Scenarios • Fair Competition • Single Best",
+    "subtitle": "Through the \"Arena\" mechanism, we fairly test AI practices in real business scenarios and recommend only verified best practices.",
+    "step1": {
+      "title": "Define Real-world Scenarios",
+      "description": "Select specific real-world problems and establish clear success criteria and evaluation frameworks. Example: Automated financial reporting, intelligent customer service Q&A"
+    },
+    "step2": {
+      "title": "Best Practices Compete",
+      "description": "Multiple solutions tested under identical conditions using real data and unified standards. Ensuring fair testing and comparable results"
+    },
+    "step3": {
+      "title": "Verify and Recommend Best",
+      "description": "Select the optimal solution based on test results, provide complete code and deployment guides. Including building of team, performance reports and cost analysis - every key elements that matters in real-world"
+    }
+  },
+  "blueprintIncludes": {
+    "title": "Every Blueprint Includes",
+    "subtitle": "Complete production-ready solutions, ready for immediate deployment",
+    "liveDemo": {
+      "title": "Live Demo",
+      "description": "Experience actual results online to verify business fit"
+    },
+    "sourceCode": {
+      "title": "Complete Source Code",
+      "description": "Open source code, auditable, customizable, supports private deployment"
+    },
+    "deploymentGuide": {
+      "title": "Deployment Guide",
+      "description": "Detailed implementation docs and architecture guides, deploy in 1-3 days"
+    },
+    "performanceReport": {
+      "title": "Performance Report",
+      "description": "Real test data including accuracy, response time, resource usage"
+    }
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "subtitle": "Real Companies, Real Results"
+  },
+  "trust": {
+    "title": "Why Trust RWAI",
+    "verified": {
+      "title": "Verified",
+      "description": "All solutions tested in real scenarios with traceable data"
+    },
+    "expertTeam": {
+      "title": "Expert Team",
+      "description": "AI experts from Tsinghua, Oxford and Fortune 500 Companies"
+    },
+    "replicable": {
+      "title": "Replicable",
+      "description": "All solutions tested in real scenarios with traceable practice"
+    }
+  },
+  "finalCta": {
+    "title": "Ready to Find Your AI Solution?",
+    "description": "Browse verified AI blueprints, or join the developer community to contribute",
+    "browse": "Browse Blueprints",
+    "github": "GitHub",
+    "beta": "Currently in beta testing, we welcome your feedback and suggestions"
+  },
+  "arena": {
+    "title": "AI Best Practices Arena",
+    "subtitle": "Discover and verify the best AI implementations",
+    "allCategories": "All Categories",
+    "allIndustries": "All Industries",
+    "filterByCategory": "Filter by Category",
+    "filterByIndustry": "Filter by Industry",
+    "sortBy": "Sort by",
+    "sortOptions": {
+      "quality": "Quality",
+      "efficiency": "Efficiency",
+      "cost": "Cost",
+      "trust": "Trust",
+      "stars": "GitHub Stars"
+    },
+    "viewDetails": "View Details",
+    "verified": "Verified",
+    "inArena": "In Arena"
+  },
+  "categories": {
+    "service": "Service",
+    "management": "Management",
+    "marketing": "Marketing",
+    "riskControl": "Risk Control",
+    "operations": "Operations",
+    "general": "General"
+  },
+  "footer": {
+    "brand": "RWAI Arena",
+    "brandDescription": "Real-World AI Arena - Finding the best AI practices for real-world scenarios",
+    "platform": "Platform",
+    "arena": "Arena",
+    "framework": "Framework",
+    "faq": "FAQ",
+    "community": "Community",
+    "github": "GitHub",
+    "about": "About",
+    "contactUs": "Contact Us",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2025 RWAI. All rights reserved.",
+    "followOnGitHub": "Follow on GitHub"
+  }
+}

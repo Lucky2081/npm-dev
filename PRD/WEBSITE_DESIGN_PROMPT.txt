@@ -1,0 +1,1549 @@
+# RWAI 网站主设计文档
+
+> 用于 AI 设计本网站的核心设计文档
+
+---
+
+## 1. 项目定位
+
+**Real-World AI Arena** - 一个中立开源的 AI 最佳实践开源平台
+
+- **核心价值**：寻找真实场景下的 AI 最佳实践（Find the ONE AI best practice for your real-world task）
+- **目标用户**：企业决策者、AI 开发者、技术研究者
+- **关键特性**：双语（中英）、竞技场排名、验证过的最佳实践、完全开源
+
+
+---
+
+## 2. 技术选型（约束条件）
+
+```
+框架：Next.js 16+ (App Router)
+语言：TypeScript
+样式：Tailwind CSS
+组件：shadcn/ui
+国际化：next-intl
+动画：Framer Motion
+图表：Recharts (雷达图)
+```
+
+**理由**：现代技术栈、SEO 友好、类型安全、易于维护
+
+---
+
+## 3. 页面结构
+
+
+### 页面清单
+
+| 页面 | 核心内容 | 数据来源 |
+|------|----------|----------|
+| **首页** | Hero区、热门擂台、行业分类、工作流程、关于RWAI | lib/data.ts + locales/*.json |
+| **擂台（Arena）** | 筛选器、排序、擂台卡片 | lib/data.ts |
+| **实践详情** | 概览、演示视频、实践详情 | lib/data.ts + Markdown文件 |
+| **框架** | 技术框架说明 | 静态内容 |
+| **FAQ** | 问答列表 | 静态内容或JSON |
+| **About RWAI** | 项目介绍、联系方式 | 静态内容 |
+
+### 页面内容
+
+| **首页** | 
+
+*左上角主LOGO*
+RWAI Arena
+
+*Hero区*
+标签：✔open source ✔verified ✔replicable
+主标题：Which AI Actually Works?（AI实战，谁是最佳？)
+副标题：We test them. Recommend only the Best Practice.（跑通AI落地的最佳实践）
+正文：Test AI practice in real-world scenarios. Verify what works. Locate only the best-proven practice and open-source everything - not only the code, but the whole practice you need in real-world.（在真实场景下寻找并验证AI落地的最佳实践，不仅开源代码，也开源可复刻的实践路径）
+
+
+*热门擂台（Featured AI Arenas）*
+根据页面浏览量排名，选择排名前六的擂台
+展示擂台名称、功能类别、行业类别
+
+*行业分类 (Explore by Industries)*
+根据不同类别链接到Arena页的对应筛选框架
+
+*筛选流程 （Our Approach）*
+
+主标题：Real Scenarios • Fair Competition • Single Best
+副标题：Through the "Arena" mechanism, we fairly test AI practices in real business scenarios and recommend only verified best practices.
+
+01 Define Real-world Scenarios
+Select specific real-world problems and establish clear success criteria and evaluation frameworks
+Example: Automated financial reporting, intelligent customer service Q&A
+
+02 Best Practices Compete
+Multiple solutions tested under identical conditions using real data and unified standards
+Ensuring fair testing and comparable results
+
+03 Verify and Recommend Best
+Select the optimal solution based on test results, provide complete code and deployment guides
+Including building of team, performance reports and cost analysis - every key elements that matters in real-world
+
+*关于RWAI (Why Trust RWAI)*
+Open Source
+Talk is cheap, code is not enough, we open source every key elements in real-world practice.
+
+Expert Team
+AI experts from Tsinghua, Oxford and Fortune 500 Companies
+
+Replicable
+All solutions tested in real scenarios with traceable practice.
+
+*测试版说明*
+Currently in beta testing, we welcome your feedback and suggestions
+
+| **擂台** | 
+标题：AI Best Practices Arena
+副标题：Discover and verify the best AI implementations
+
+两个过滤器：
+Filter by Category
+Filter by Industry
+
+经过过滤的擂台列表：
+列表内容来源：Content/List of Arenas.xlsx  ！只从这个文件夹中选取！
+每项展示内容：擂台名称、本周擂主、亮点、是否已验证、行业类别、应用类别、简要描述、详情链接、效果图、小雷达图：（速度、质量、安全、成本）
+
+| **实践详情** | 
+此页面为| **擂台** | 的二级页面：即每个擂台的详情页
+
+详情内容来源：Content/Arena ，定位该文件夹下对应擂台名称的文件夹
+展示内容：上述文件夹中，Main.docx的内容
+其他文件链接：上述文件夹中的其他文件内容
+
+| **技术框架** | 
+主标题：Technical Framework
+副标题：Understanding RWAI's approach to AI implementation
+
+*What is the RWAI-S Framework?*
+RWAI-S (Real-World AI Symbiosis) is an academic open-source project dedicated to bridging the "implementation gap" between AI research and real-world applications. We address the disconnect between high model performance on academic benchmarks and operational value in dynamic, high-stakes environments, proposing a new paradigm of Human-AI Symbiosis.
+
+From "Human-in-the-Loop" (HITL) to "Human-AI Symbiosis," we redefine the relationship between Human Intelligence (HI) and Artificial Intelligence (AI), shifting from passive error correction to active value alignment. Through formalized Task Sets and Contextual Alignment mechanisms, we ensure AI systems are operable and robust in real-world scenarios.
+
+*Theoretical Foundation*
+
+【Task Set Formalization】
+We formalize real-world tasks through a 5-tuple T = ⟨G, K, M, P, L⟩, extending the static "dataset" concept to a dynamic "Task Set" that explicitly models goals, knowledge, evaluation metrics, interaction protocols, and historical trajectories.
+G
+Goal Ontology
+Hierarchical goal decomposition
+K
+Domain Knowledge Graph
+Dynamic knowledge state
+M
+Evaluation Metric Matrix
+Multi-dimensional criteria
+P
+Interaction Protocol Set
+Collaboration rules
+
+【Contextual Alignment】
+Traditional alignment research focuses on "universal" human values, but real-world AI deployment is inherently contextual. We define Contextual Alignment as optimizing vector distance to minimize Relational Dissonance and Alignment Debt.
+
+Operational
+Workflow adherence
+Cultural
+Communication norms
+Temporal
+State awareness
+
+【Human-AI Symbiosis】
+The paradigm shift from "tool" to "teammate" requires rethinking the ontological status of AI agents. We propose three core principles: Bidirectional Cognitive Alignment, Context-Aware Agency, and Relational Consonance, creating "Centaurian Systems" that surpass either entity operating alone.
+
+Bidirectional Alignment
+Context-Aware Agency
+Relational Consonance
+Extended Self
+Joint System State
+
+*Core Philosophy*
+
+01
+Task-Driven Approach
+We don't test general model capabilities. Instead, we evaluate specific business scenario tasks to ensure solutions work in real-world environments.
+
+02
+Human-in-the-Loop
+Through HITL (Human-in-the-Loop) mechanisms, we incorporate human expert knowledge into AI systems to improve accuracy and trustworthiness.
+
+03
+Open Ecosystem
+All best practices are based on open-source technology stacks, avoiding platform lock-in and enabling organizations to maintain control over their AI capabilities.
+
+04
+Continuous Validation
+Through the Arena mechanism, we continuously evaluate and update best practices to ensure organizations have access to the latest technological solutions.
+
+【Four-Dimensional Evaluation】
+Each AI practice is evaluated across four dimensions: Quality, Efficiency, Cost, and Trust.
+
+Q
+Quality
+Accuracy and reliability of output
+
+E
+Efficiency
+Processing speed and resource efficiency
+
+C
+Cost
+Economic feasibility of deployment and operations
+
+T
+Trust
+Security and compliance
+
+*How to Participate*
+Submit your AI practice to compete in the Arena
+
+Vote and provide feedback on existing solutions
+
+Contribute code and improvements on GitHub
+
+Share your experience with the community
+
+*Ready to Get Started?*
+Explore AI best practices or submit your own solution
+
+Browse Arena	Contact Us
+
+| **FAQ** | 
+
+参考content/RWAI Info.docx中FAQ的信息
+
+Contact Us
+
+| **About RWAI** |
+
+参考content/RWAI Info.docx中"关于我们"和“合作伙伴”的信息
+
+
+---
+
+### 4 Arena标签：类别与行业
+
+**应用类别（5个）**：
+- service（服务）
+- management（管理）
+- marketing（营销）
+- risk-control（风控）
+- operations（运营）
+
+**行业类别（6个）**：
+- finance（金融）
+- retail（零售）
+- education（教育）
+- healthcare（医疗）
+- energy（能源）
+- manufacturing（制造）
+
+如应用类别或行业类别标签为“通用（General）”，则视为满足所有同类标签
+
+---
+
+## 5. 内容管理系统
+
+### 5.1 数据文件位置
+
+**核心数据**：lib/data.ts
+- 所有 Arena 数据
+- 所有 Practice 元数据
+- 类别和行业配置
+
+**翻译文本**：locales/en.json, locales/zh.json
+- 导航文本
+- 按钮文本
+- 通用UI文本
+
+### 5.2 Markdown 内容
+
+**位置**：public/content/practices/[practice-id]/
+
+**文件结构**：
+```
+practice-id-v1/
+├── index.en.md           # 概览（英文）
+├── index.zh.md           # 概览（中文）
+├── implementation.en.md  # 实施指南
+├── implementation.zh.md
+├── requirements.en.md    # 验证需求
+├── requirements.zh.md
+├── validation-report.en.md
+├── validation-report.zh.md
+├── project-report.en.md
+└── project-report.zh.md
+```
+
+**渲染要求**：
+- 使用 react-markdown
+- 支持代码高亮
+- 支持 GFM (GitHub Flavored Markdown)
+- 内部链接自动处理
+
+---
+
+## 6. 设计风格指南
+
+> 参考：https://rwai-website.vercel.app/en
+> 本节详细描述网站应遵循的视觉风格和设计规范
+
+### 6.1 整体视觉风格
+
+**设计理念**：
+- **现代专业**：简洁、清晰、科技感
+- **信任可靠**：强调验证、开源、中立
+- **结果导向**：突出数据、成效、最佳实践
+- **国际化**：双语支持，全球视野
+
+**视觉特征**：
+- 充足留白，内容呼吸感强
+- 清晰的信息层级
+- 数据驱动的视觉呈现
+- 专业的配色方案
+
+### 6.2 页面布局规范
+
+#### 6.2.1 首页布局结构
+
+**A. 顶部标签区（Top Badge Bar）**
+```
+┌─────────────────────────────────────────────────────┐
+│   Open Source • Verified • Replicable│
+└─────────────────────────────────────────────────────┘
+```
+- 位置：导航栏下方，Hero区上方
+- 样式：小字号，浅色文字，间隔分隔符（•）
+- 颜色：次要文本色 (#64748B)
+- 字号：12-14px
+- 字重：Medium (500)
+
+**B. Hero区（核心展示区）**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│           [大标题]                                   │
+│                    │
+│                                                     │
+│        [副标题 - 两行布局]                           │
+│              │
+│                                                     │
+│      [正文描述 - 1-2句话，较宽]                      │
+│      │
+│                                                     │
+│    [CTA按钮组 - 两个主按钮]                         │
+│   [Find AI Solutions]  [Join as Developer]          │
+│   主色按钮              次级按钮/轮廓按钮             │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+```
+
+布局规范：
+- **对齐**：居中对齐
+- **标题**：
+  - 字号：48-64px (桌面), 32-40px (移动)
+  - 字重：Bold (700)
+  - 行高：1.1-1.2
+  - 颜色：主文本色 (#0F172A)
+- **副标题**：
+  - 字号：24-32px
+  - 字重：SemiBold (600)
+  - 行高：1.3
+  - 颜色：主文本色
+- **正文**：
+  - 字号：16-18px
+  - 字重：Regular (400)
+  - 行高：1.6
+  - 颜色：次要文本色 (#64748B)
+  - 最大宽度：600-700px
+- **按钮**：
+  - 间距：12-16px
+  - 高度：44-48px
+  - 圆角：6-8px
+
+
+**D. 行业探索区（Explore by Industry）**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│       Explore by Industry                           │
+│  Covering 6 industries, 14+ verified AI solutions   │
+│                                                     │
+│  ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐     │
+│  │Finance│ │Retail│ │Edu...│ │Health│ │Energy│     │
+│  └──────┘ └──────┘ └──────┘ └──────┘ └──────┘     │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+```
+
+布局规范：
+- **标题**：左对齐或居中
+- **卡片网格**：
+  - 桌面：3-4列网格
+  - 平板：2-3列
+  - 移动：1-2列
+  - 间距：16-24px
+- **行业卡片**：
+  - 高度：120-160px
+  - 圆角：12-16px
+  - 背景：白色/浅灰 (#F8FAFC)
+  - Hover：轻微上浮阴影
+  - 图标 + 标题 + 描述
+
+**E. 方法论部分（Our Approach）**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│        Real Scenarios • Fair Competition • Single Best│
+│                                                     │
+│  Through the "Arena" mechanism, we fairly test...   │
+│                                                     │
+│  ┌─────────┐    ┌─────────┐    ┌─────────┐         │
+│  │   01    │    │   02    │    │   03    │         │
+│  │         │    │         │    │         │         │
+│  │ [图标]  │    │ [图标]  │    │ [图标]  │         │
+│  │         │    │         │    │         │         │
+│  │ Define  │    │Solutions│    │ Verify  │         │
+│  │ Real... │    │ Compete │    │ & Best  │         │
+│  │         │    │         │    │         │         │
+│  │ 描述... │    │ 描述... │    │ 描述... │         │
+│  └─────────┘    └─────────┘    └─────────┘         │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+```
+
+布局规范：
+- **主标题**：居中，较大字号（32-40px）
+- **副标题**：居中，较宽，最大宽度700px
+- **步骤卡片**：
+  - 水平排列（桌面），垂直堆叠（移动）
+  - 宽度：相等或flex-1
+  - 步骤编号：大号数字（01, 02, 03）
+    - 字号：48-64px
+    - 颜色：浅色/主色调
+    - 位置：卡片顶部
+  - 图标：可选，步骤编号下方
+  - 标题：SemiBold (600)，18-20px
+  - 描述：Regular (400)，14-16px，次要文本色
+  - 卡片背景：透明或浅色
+  - 边框：可选（细线）
+
+**F. Blueprint包含内容（Every Blueprint Includes）**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│           Every Blueprint Includes                  │
+│   Complete production-ready solutions, ready...     │
+│                                                     │
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐│
+│  │ [图标]  │  │ [图标]  │  │ [图标]  │  │ [图标]  ││
+│  │         │  │         │  │         │  │         ││
+│  │ Live    │  │ Complete│  │Deploy...│  │Perform..││
+│  │ Demo    │  │ Source  │  │ Guide   │  │ Report  ││
+│  │         │  │         │  │         │  │         ││
+│  │ 描述... │  │ 描述... │  │ 描述... │  │ 描述... ││
+│  └─────────┘  └─────────┘  └─────────┘  └─────────┘│
+│                                                     │
+└─────────────────────────────────────────────────────┘
+```
+
+布局规范：
+- **标题**：居中或左对齐
+- **特性网格**：4列（桌面），2列（平板），1列（移动）
+- **特性卡片**：
+  - 图标：32-40px，主色或深色
+  - 标题：SemiBold，16-18px
+  - 描述：Regular，14px，次要文本色
+  - 间距：卡片之间24-32px
+
+**G. 案例研究（Case Studies）**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│           Case Studies                              │
+│        Real Companies, Real Results                 │
+│                                                     │
+│  ┌─────────────────────────────────────────────┐   │
+│  │                                             │   │
+│  │  NL2SQL Financial Reports     Major Bank    │   │
+│  │  [示意图/截图]                              │   │
+│  │                                             │   │
+│  │  ┌─────────┐      ┌─────────┐              │   │
+│  │  │  Before │      │  After  │              │   │
+│  │  │ Manual: │      │  AI:    │              │   │
+│  │  │ 2 hours │      │ 5 minutes│             │   │
+│  │  └─────────┘      └─────────┘              │   │
+│  │                                             │   │
+│  │      24x Efficiency    95% Accuracy         │   │
+│  │                                             │   │
+│  └─────────────────────────────────────────────┘   │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+```
+
+布局规范：
+- **标题**：大号，居中
+- **案例卡片**：
+  - 背景：白色或浅色
+  - 圆角：16-20px
+  - 阴影：柔和
+  - 内边距：32-40px
+- **对比布局**：
+  - Before/After：并排对比卡片
+  - 结果指标：突出显示，大号数字
+- **配色**：
+  - Before：中性色
+  - After：成功绿色或主色
+
+**H. 信任部分（Why Trust RWAI）**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│              Why Trust RWAI                         │
+│                                                     │
+│  ┌─────────┐    ┌─────────┐    ┌─────────┐         │
+│  │ [图标]  │    │ [图标]  │    │ [图标]  │         │
+│  │         │    │         │    │         │         │
+│  │Verified │    │ Expert  │    │  Open   │         │
+│  │         │    │  Team   │    │  Source │         │
+│  │         │    │         │    │         │         │
+│  │ All...  │    │ AI...   │    │ Code... │         │
+│  └─────────┘    └─────────┘    └─────────┘         │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+```
+
+布局规范：
+- **标题**：大号，居中
+- **信任点**：3列网格
+- **图标**：48-56px，可使用徽章/盾牌图标
+- **标题**：Bold，20-24px
+- **描述**：Regular，16px，次要文本色
+
+**I. 底部CTA（Final CTA）**
+```
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│   Ready to Find Your AI Solution?                  │
+│ Browse verified AI blueprints, or join the...       │
+│                                                     │
+│   [Browse Blueprints]    [GitHub]                   │
+│      主按钮              次级按钮/链接               │
+│                                                     │
+│   Currently in beta testing, we welcome...          │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+```
+
+布局规范：
+- **背景**：可使用浅色背景区分
+- **标题**：大号，居中
+- **按钮**：居中，水平排列
+- **Beta提示**：小号，浅色，居中
+
+#### 6.2.2 通用布局原则
+
+**容器系统**：
+```
+最大宽度层级：
+- 全宽：背景色块、Hero背景
+- 1400px：主要内容容器
+- 1200px：文本内容区
+- 800px：窄内容区（表单、详情）
+- 600px：移动端全宽
+```
+
+**间距系统**：
+```
+section间距：80-120px
+卡片间距：24-32px
+元素间距：16-24px
+小元素间距：8-12px
+```
+
+**对齐**：
+- 主要内容：左对齐或居中（根据设计意图）
+- 导航：左对齐logo，右对齐菜单
+- 卡片网格：均匀分布
+- 文本块：左对齐，最大宽度限制
+
+### 6.3 颜色系统（详细）
+
+#### 6.3.1 主色调
+```
+主色（Primary）: #155EEF
+- 用途：主按钮、链接、强调元素、图标
+- Hover：#0E4DB8（加深10-15%）
+- Active：#0A3A8F
+
+辅助色（Accent）: #0F4761
+- 用途：标题、副标题、重要文本
+- 辅助强调元素
+```
+
+#### 6.3.2 语义色
+```
+成功（Success）: #10B981
+- 已验证标识
+- 正向指标
+- 成功状态
+
+警告（Warning）: #F59E0B
+- 注意事项
+- 待验证状态
+
+错误（Error）: #EF4444
+- 错误提示
+- 失败状态
+
+信息（Info）: #3B82F6
+- 信息提示
+- 帮助文本
+```
+
+#### 6.3.3 中性色
+```
+文本主色: #0F172A
+- 标题、正文、重要文本
+
+文本次色: #64748B
+- 描述、说明、次要信息
+
+文本禁用: #94A3B8
+- 禁用状态、占位符
+
+背景主色: #FFFFFF
+- 卡片背景、主要内容区
+
+背景次色: #F8FAFC
+- Section背景、交替背景
+
+背景三级: #F1F5F9
+- 页面背景、分隔区
+```
+
+#### 6.3.4 渐变色
+```
+主渐变：linear-gradient(135deg, #155EEF 0%, #0F4761 100%）
+- 用途：Hero背景、特殊按钮
+- 谨慎使用，保持专业性
+
+淡渐变：linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%）
+- 用途：Section背景
+- 创造层次感
+```
+
+### 6.4 排版系统
+
+#### 6.4.1 字体家族
+```
+无衬线字体（Sans-serif）:
+- 英文：Manrope
+- 中文：Noto Sans SC
+- 备选：system-ui, -apple-system, sans-serif
+
+等宽字体（Monospace）:
+- IBM Plex Mono
+- 备选：'Courier New', monospace
+
+代码字体:
+- Fira Code 或 JetBrains Mono（可选，用于代码展示）
+```
+
+#### 6.4.2 字号层级
+```
+H1 - 页面主标题:
+- 桌面：48-64px
+- 移动：32-40px
+- 字重：700 (Bold)
+- 行高：1.1-1.2
+
+H2 - Section标题:
+- 桌面：36-48px
+- 移动：28-36px
+- 字重：700 (Bold)
+- 行高：1.2-1.3
+
+H3 - 卡片标题:
+- 桌面：24-32px
+- 移动：20-24px
+- 字重：600 (SemiBold)
+- 行高：1.3
+
+H4 - 小标题:
+- 桌面：18-20px
+- 移动：16-18px
+- 字重：600 (SemiBold)
+- 行高：1.4
+
+Body Large - 重要正文:
+- 18px
+- 字重：400-500
+- 行高：1.6
+
+Body - 标准正文:
+- 16px
+- 字重：400
+- 行高：1.6
+
+Body Small - 次要文本:
+- 14px
+- 字重：400
+- 行高：1.5
+
+Caption - 说明文本:
+- 12px
+- 字重：400-500
+- 行高：1.4
+```
+
+#### 6.4.3 文本样式
+```
+段落间距:
+- 段落之间：16-24px
+- 标题与段落：12-16px
+
+文本颜色:
+- 主要文本：#0F172A
+- 次要文本：#64748B
+- 链接文本：#155EEF（可加下划线）
+- 链接Hover：#0E4DB8
+
+文本对齐:
+- 正文：左对齐
+- 标题：左对齐或居中（根据设计）
+- Hero区：居中
+
+文本装饰:
+- 重点：加粗或主色
+- 链接：下划线（可选）或仅颜色
+- 引用：左边框 + 浅色背景
+```
+
+### 6.5 卡片设计
+
+#### 6.5.1 Arena/Blueprint卡片
+```
+┌────────────────────────────────────────┐
+│ [验证徽章]              [雷达图]        │
+│                                        │
+│ NL2SQL Financial Report Generation     │
+│ [行业标签] [类别标签]                   │
+│                                        │
+│ Generate financial reports from...     │
+│                                        │
+│ ⭐ 95%  ⚡ 88%  💰 92%  🔒 90%        │
+│                                        │
+│ ⭐ 1,234  🍴 56                        │
+│                                        │
+│ [View Details →]                       │
+└────────────────────────────────────────┘
+```
+
+**卡片规范**：
+- **尺寸**：
+  - 最小高度：280-320px
+  - 宽度：flex（网格布局）
+- **圆角**：12-16px
+- **边框**：1px solid #E2E8F0
+- **背景**：#FFFFFF
+- **阴影**：
+  - 默认：无或极浅（box-shadow: 0 1px 3px rgba(0,0,0,0.05)）
+  - Hover：medium（box-shadow: 0 4px 12px rgba(0,0,0,0.1)）
+- **内边距**：24px
+- **悬停效果**：
+  - 轻微上浮：translateY(-4px)
+  - 阴影增强
+  - 过渡：transition: all 0.2s ease
+
+**卡片元素**：
+- **验证徽章**：
+  - 位置：右上角或左上角
+  - 样式：pill形状，成功色背景
+  - 文字：✓ Verified
+- **雷达图**：
+  - 位置：右上角，小尺寸（80-100px）
+  - 背景：透明或浅色
+- **标题**：
+  - 字号：18-20px
+  - 字重：600
+  - 颜色：主文本色
+  - 最大行数：2行，超出省略
+- **标签**：
+  - 样式：pill形状，浅色背景
+  - 字号：12px
+  - 内边距：4px 12px
+  - 圆角：12-16px
+- **描述**：
+  - 字号：14px
+  - 行高：1.5
+  - 颜色：次要文本色
+  - 最大行数：2-3行
+- **指标**：
+  - 图标 + 数值
+  - 字号：14px
+  - 间距：8-12px
+- **GitHub数据**：
+  - 图标 + 数字
+  - 字号：13px
+  - 颜色：次要文本色
+- **链接按钮**：
+  - 文字链接或小按钮
+  - 箭头图标（可选）
+
+#### 6.5.2 行业/类别卡片
+```
+┌──────────────┐
+│              │
+│    [图标]    │
+│              │
+│   Finance    │
+│              │
+│  12 Arenas   │
+│              │
+└──────────────┘
+```
+
+**规范**：
+- **尺寸**：正方形或略长方形
+- **圆角**：12-16px
+- **背景**：浅色（#F8FAFC）或白色
+- **Hover**：
+  - 背景变为主色浅色变体
+  - 边框：1px solid 主色
+  - 图标：放大或旋转
+- **图标**：
+  - 尺寸：48-56px
+  - 颜色：主色或深色
+- **标题**：
+  - 字号：18-20px
+  - 字重：600
+- **描述**：
+  - 字号：14px
+  - 颜色：次要文本色
+
+### 6.6 按钮系统
+
+#### 6.6.1 按钮变体
+```
+Primary（主按钮）:
+- 背景：#155EEF
+- 文字：白色
+- Hover：背景 #0E4DB8
+- 圆角：6-8px
+- 高度：44-48px
+- 内边距：12-24px
+- 字重：600
+
+Secondary（次级按钮/Outline）:
+- 背景：透明
+- 边框：2px solid #E2E8F0
+- 文字：主文本色
+- Hover：背景 #F8FAFC，边框 #CBD5E1
+- 圆角：6-8px
+- 高度：44-48px
+- 内边距：12-24px
+- 字重：500-600
+
+Ghost（幽灵按钮）:
+- 背景：透明
+- 文字：主色 #155EEF
+- Hover：背景 #EFF6FF
+- 圆角：6-8px
+- 高度：44-48px
+- 内边距：12-24px
+- 字重：500
+
+Text Button（文字按钮）:
+- 背景：透明
+- 文字：主色
+- Hover：underline 或 颜色加深
+- 高度：auto
+- 内边距：8px 0
+- 字重：500
+```
+
+#### 6.6.2 按钮尺寸
+```
+Large（大按钮）:
+- 高度：52-56px
+- 内边距：16-32px
+- 字号：16-18px
+- 用途：Hero区CTA
+
+Default（标准按钮）:
+- 高度：44-48px
+- 内边距：12-24px
+- 字号：14-16px
+- 用途：通用操作
+
+Small（小按钮）:
+- 高度：32-36px
+- 内边距：8-16px
+- 字号：13-14px
+- 用途：卡片内操作、表格操作
+```
+
+#### 6.6.3 按钮状态
+```
+Disabled:
+- 透明度：0.5-0.6
+- pointer-events: none
+- 背景：灰色（#E2E8F0）
+
+Loading:
+- 显示加载图标（spinner）
+- 禁用点击
+- 可选：按钮文字改为"Loading..."
+```
+
+### 6.7 徽章（Badges）
+
+#### 6.7.1 状态徽章
+```
+Verified（已验证）:
+- 背景：#DCFCE7（浅绿）
+- 文字：#166534（深绿）
+- 图标：✓
+- 圆角：12-16px（pill形状）
+- 内边距：4px 12px
+
+In-Arena（竞技中）:
+- 背景：transparent
+- 边框：1px solid #E2E8F0
+- 文字：#64748B
+- 圆角：12-16px
+- 内边距：4px 12px
+
+Beta（测试版）:
+- 背景：#FEF3C7（浅黄）
+- 文字：#92400E（深黄）
+- 圆角：12-16px
+- 内边距：4px 12px
+```
+
+#### 6.7.2 标签徽章
+```
+行业标签（Finance, Retail等）:
+- 背景：#EFF6FF（浅蓝）
+- 文字：#1E40AF（深蓝）
+- 圆角：6-8px
+- 内边距：4px 10px
+- 字号：12px
+
+类别标签（Service, Management等）:
+- 背景：#F1F5F9（浅灰）
+- 文字：#475569（深灰）
+- 圆角：6-8px
+- 内边距：4px 10px
+- 字号：12px
+```
+
+### 6.8 表单元素
+
+#### 6.8.1 输入框
+```
+默认状态:
+- 边框：1px solid #E2E8F0
+- 背景：#FFFFFF
+- 圆角：6-8px
+- 高度：44px
+- 内边距：0 16px
+- 字号：14-16px
+
+Focus状态:
+- 边框：2px solid #155EEF
+- box-shadow：0 0 0 3px rgba(21, 94, 239, 0.1)
+
+Error状态:
+- 边框：2px solid #EF4444
+- 错误文字：#EF4444，字号12px，显示在输入框下方
+
+Disabled状态:
+- 背景：#F1F5F9
+- 文字：#94A3B8
+- 光标：not-allowed
+```
+
+#### 6.8.2 下拉选择
+```
+样式与输入框相同
+右侧显示下拉图标（chevron-down）
+选项hover背景：#F8FAFC
+选中项背景：#EFF6FF，文字：主色
+```
+
+#### 6.8.3 复选框/单选框
+```
+未选中:
+- 边框：2px solid #E2E8F0
+- 尺寸：18x18px
+- 圆角：4px（复选框），50%（单选框）
+
+选中:
+- 背景：#155EEF
+- 边框：#155EEF
+- 显示checkmark图标
+
+Focus:
+- 边框：2px solid #155EEF
+- box-shadow：0 0 0 3px rgba(21, 94, 239, 0.1)
+```
+
+### 6.9 图标系统
+
+#### 6.9.1 图标库
+```
+推荐使用：Lucide React 或 Heroicons
+- 风格：outline（轮廓线风格）
+- 尺寸：统一使用 stroke-width="2"
+```
+
+#### 6.9.2 图标尺寸
+```
+Small（小图标）: 16x16px
+- 用途：行内图标、按钮图标
+
+Default（标准图标）: 20-24x20-24px
+- 用途：列表图标、卡片图标
+
+Medium（中图标）: 32x32px
+- 用途：功能图标、章节图标
+
+Large（大图标）: 48-56x48-56px
+- 用途：Hero图标、特性图标
+```
+
+#### 6.9.3 图标颜色
+```
+主色图标：#155EEF
+- 强调、交互元素
+
+深色图标：#0F172A
+- 功能性图标
+
+灰色图标：#64748B
+- 次要图标、装饰
+
+成功图标：#10B981
+- 验证、成功状态
+```
+
+### 6.10 图表可视化
+
+#### 6.10.1 雷达图（Radar Chart）
+```
+尺寸:
+- 卡片内：80-100px
+- 详情页：200-300px
+
+颜色:
+- 数据区域：rgba(21, 94, 239, 0.2) 填充
+- 数据线条：#155EEF，2-3px
+- 网格线：#E2E8F0，1px
+- 标签：#64748B，12px
+
+交互:
+- Hover：显示详细数值tooltip
+- Tooltip背景：#0F172A
+- Tooltip文字：白色，12px
+```
+
+#### 6.10.2 柱状图/折线图（可选）
+```
+用途：展示统计数据、对比数据
+
+颜色:
+- 主数据：#155EEF
+- 次数据：#0F4761
+- 网格：#E2E8F0
+- 坐标轴：#94A3B8
+
+样式:
+- 圆角：4-6px（柱状图）
+- 线宽：2-3px（折线图）
+- 点大小：6-8px（折线图）
+```
+
+### 6.11 导航设计
+
+#### 6.11.1 顶部导航栏
+```
+布局:
+┌────────────────────────────────────────────────────┐
+│ [Logo]  [Arena]  [Framework]  [FAQ]  [About]      │
+│                                    [EN|ZH] [GitHub]│
+└────────────────────────────────────────────────────┘
+
+规范:
+- 高度：64-72px
+- 背景：白色（固定顶部）或透明（绝对定位）
+- 边框：底部1px solid #E2E8F0（固定时）
+- Logo：左对齐，字重700，主色或深色
+- 导航链接：
+  * 字号：14-16px
+  * 字重：500
+  * 颜色：次要文本色
+  * Hover：主文本色
+  * Active：主色，可选底部边框指示器
+- 右侧按钮：
+  * 语言切换：Outline或Ghost样式
+  * GitHub：图标或文字+图标
+```
+
+#### 6.11.2 移动端导航
+```
+汉堡菜单:
+- 位置：右上角
+- 图标：24px
+- 菜单面板：
+  * 位置：从右侧滑入或顶部下拉
+  * 背景：白色
+  * 宽度：80-100%（移动端）
+  * 阴影：box-shadow: 0 10px 30px rgba(0,0,0,0.1)
+  * 链接：垂直堆叠，间距16px
+  * 关闭按钮：右上角X图标
+```
+
+#### 6.11.3 面包屑导航
+```
+用途：详情页、深层页面
+
+样式:
+Home > Arena > NL2SQL Financial Reports
+- 分隔符：> 或 /
+- 字号：13-14px
+- 当前页：主文本色，加粗
+- 上级页：次要文本色，hover主色
+```
+
+### 6.12 分页与加载
+
+#### 6.12.1 分页组件
+```
+样式:
+[<] [1] [2] [3] ... [10] [>]
+
+规范:
+- 页码按钮：40x40px，圆角6-8px
+- 当前页：主色背景，白色文字
+- 其他页：浅色背景或边框，深色文字
+- Disabled状态：opacity 0.5
+- 间距：8px
+```
+
+#### 6.12.2 加载状态
+```
+Skeleton（骨架屏）:
+- 背景：#F1F5F9
+- 动画：shimmer效果
+- 圆角：与实际元素相同
+
+Spinner（加载图标）:
+- 颜色：主色 #155EEF
+- 尺寸：24-32px
+- 动画：旋转
+
+Loading文字:
+- 字号：14px
+- 颜色：次要文本色
+- 与图标间距：8px
+```
+
+### 6.13 动画与过渡
+
+#### 6.13.1 过渡时间
+```
+Fast: 150ms
+- 用途：按钮hover、链接hover
+
+Default: 200-300ms
+- 用途：卡片hover、颜色变化、淡入淡出
+
+Slow: 400-500ms
+- 用途：页面切换、复杂动画
+```
+
+#### 6.13.2 缓动函数
+```
+Ease-out: transition: all 0.2s ease-out
+- 用途：hover效果
+
+Ease-in-out: transition: all 0.3s ease-in-out
+- 用途：页面加载、组件进入
+
+Spring: spring动画（Framer Motion）
+- 用途：手势交互、动态元素
+```
+
+#### 6.13.3 常用动画
+```
+Fade In（淡入）:
+- opacity: 0 → 1
+- 用途：页面加载、内容出现
+
+Slide Up（上滑）:
+- transform: translateY(20px) → translateY(0)
+- opacity: 0 → 1
+- 用途：列表项出现、底部内容
+
+Scale（缩放）:
+- transform: scale(0.95) → scale(1)
+- 用途：模态框、按钮点击
+
+Shake（抖动）:
+- 用于错误提示
+- transform: translateX(-5px) → translateX(5px)
+```
+
+### 6.14 响应式设计
+
+#### 6.14.1 断点系统
+```
+Mobile First:
+- xs: 0-639px（手机竖屏）
+- sm: 640-767px（手机横屏）
+- md: 768-1023px（平板）
+- lg: 1024-1279px（小桌面）
+- xl: 1280-1535px（桌面）
+- 2xl: 1536px+（大桌面）
+```
+
+#### 6.14.2 移动端适配
+```
+导航:
+- 汉堡菜单（< 1024px）
+- 全屏菜单面板或侧边菜单
+
+布局:
+- 单列布局（网格变单列）
+- 减少内边距（32px → 16px）
+- 堆叠flex容器
+
+文本:
+- 减小字号（H1: 48px → 32px）
+- 保持行高比例
+
+卡片:
+- 单列或双列网格
+- 减少卡片内边距
+- 隐藏次要信息（如：雷达图可缩小或隐藏）
+
+按钮:
+- 全宽按钮（移动端表单）
+- 堆叠按钮组（Hero区CTA）
+```
+
+### 6.15 可访问性（A11y）
+
+#### 6.15.1 对比度
+```
+文本对比度:
+- 正文文本（14px+）：最小4.5:1
+- 大文本（18px+）：最小3:1
+- 推荐：7:1（AAA级）
+
+示例:
+- 白色文字 (#FFFFFF) on #155EEF：对比度 4.7:1 ✓
+- #0F172A on #FFFFFF：对比度 16.5:1 ✓
+- #64748B on #FFFFFF：对比度 4.6:1 ✓
+```
+
+#### 6.15.2 交互状态
+```
+Focus可见:
+- 所有可交互元素必须有明显的focus状态
+- 使用outline或box-shadow
+- 颜色：主色或系统默认
+
+键盘导航:
+- Tab顺序：逻辑顺序
+- Skip link：跳过导航链接
+- Escape关闭：模态框、下拉菜单
+```
+
+#### 6.15.3 语义化
+```
+HTML结构:
+- 正确使用heading层级（h1-h6）
+- 使用nav, main, section, article, footer
+- 按钮用<button>，链接用<a>
+- 表单使用<label>
+
+ARIA标签:
+- aria-label：图标按钮
+- aria-describedby：表单帮助文本
+- aria-expanded：展开/收起状态
+- role="img"：装饰性图标
+```
+
+### 6.16 图片与媒体
+
+#### 6.16.1 图片规范
+```
+格式:
+- 照片：WebP优先，JPEG后备
+- 图形/图标：SVG优先，PNG后备
+- 动画：谨慎使用GIF，优先视频
+
+尺寸:
+- 响应式：使用srcset或next/image
+- 懒加载：below the fold图片
+- 占位符：使用blur-up或skeleton
+
+样式:
+- 圆角：与卡片一致（12-16px）
+- 阴影：可选，与卡片一致
+- 对象适配：object-fit: cover
+```
+
+#### 6.16.2 视频规范
+```
+嵌入视频:
+- 使用iframe或video标签
+- 响应式：aspect-ratio: 16/9
+- 懒加载：loading="lazy"
+
+视频占位:
+- 自定义播放按钮
+- 缩略图或首帧截图
+```
+
+### 6.17 设计Token示例（Tailwind配置）
+
+```javascript
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#155EEF',
+          dark: '#0E4DB8',
+          light: '#EFF6FF',
+        },
+        accent: '#0F4761',
+        success: '#10B981',
+        text: {
+          primary: '#0F172A',
+          secondary: '#64748B',
+          disabled: '#94A3B8',
+        },
+        bg: {
+          primary: '#FFFFFF',
+          secondary: '#F8FAFC',
+          tertiary: '#F1F5F9',
+        },
+      },
+      fontFamily: {
+        sans: ['Manrope', 'Noto Sans SC', 'system-ui', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'monospace'],
+      },
+      fontSize: {
+        'hero': ['64px', { lineHeight: '1.1', fontWeight: '700' }],
+        'h1': ['48px', { lineHeight: '1.2', fontWeight: '700' }],
+        'h2': ['36px', { lineHeight: '1.2', fontWeight: '700' }],
+        'h3': ['24px', { lineHeight: '1.3', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '1.6', fontWeight: '400' }],
+        'body': ['16px', { lineHeight: '1.6', fontWeight: '400' }],
+        'body-sm': ['14px', { lineHeight: '1.5', fontWeight: '400' }],
+        'caption': ['12px', { lineHeight: '1.4', fontWeight: '500' }],
+      },
+      spacing: {
+        'section': '100px',
+        'card': '24px',
+        'element': '16px',
+      },
+      borderRadius: {
+        'card': '12px',
+        'button': '8px',
+        'badge': '16px',
+      },
+      boxShadow: {
+        'card': '0 1px 3px rgba(0, 0, 0, 0.05)',
+        'card-hover': '0 4px 12px rgba(0, 0, 0, 0.1)',
+        'focus': '0 0 0 3px rgba(21, 94, 239, 0.1)',
+      },
+      transitionDuration: {
+        'fast': '150ms',
+        'default': '250ms',
+        'slow': '400ms',
+      },
+    },
+  },
+}
+```
+
+---
+
+## 7. 原设计系统（保留作为参考）
+
+### 7.1 颜色（已在第6节详细展开，此处保留简化版）
+
+| 角色 | 颜色 | 用途 |
+|------|------|------|
+| Primary | #155EEF (蓝) | 主按钮、链接、强调 |
+| Accent | #0F4761 (深青) | 标题、重要文本 |
+| Success | #10B981 (绿) | 成功状态、验证标识 |
+| Background | #FFFFFF / #F8FAFC | 页面背景 |
+| Text | #0F172A / #64748B | 主要/次要文本 |
+
+### 7.2 字体
+
+```
+Sans: Manrope (英文) + Noto Sans SC (中文)
+Mono: IBM Plex Mono
+```
+
+### 7.3 间距与布局
+
+- 容器最大宽度：1400px
+- 内容边距：移动端 16px，桌面 32px
+- 卡片间距：24px
+- 章节间距：80px - 120px
+
+### 7.4 组件规范
+
+**按钮变体**：
+- default：主按钮（Primary色）
+- outline：次级按钮（边框）
+- ghost：幽灵按钮（hover显示背景）
+
+**徽章（Badge）**：
+- verified：金色，表示已验证
+- in-arena：轮廓样式，表示竞技场中
+
+---
+
+## 8. 关键交互
+
+### 8.1 竞技场筛选
+- 双重筛选：类别 × 行业
+- 排序选项：质量、效率、成本、信任度、GitHub Stars
+- 实时更新，带过渡动画
+
+### 8.2 雷达图
+- 四维指标：质量、效率、成本、信任
+- Hover 显示详细数值
+- 响应式尺寸
+
+### 8.3 语言切换
+- URL 路由前缀（/en vs /zh）
+- 无刷新切换
+- 保持当前页面路径
+
+---
+
+## 9. 响应式断点
+
+```
+mobile:  < 768px
+tablet:  768px - 1024px
+desktop: > 1024px
+```
+
+**移动端适配要点**：
+- 汉堡菜单
+- 单列布局（卡片网格）
+- 横向滚动（表格）
+- 触摸友好（按钮最小44px高度）
+
+---
+
+## 10. 动画效果
+
+使用 Framer Motion 实现以下效果：
+
+- 淡入：页面加载、卡片出现
+- 滑入：侧边栏、模态框
+- 缩放：按钮hover、卡片hover
+- 手风琴：展开/收起动画
+
+---
+
+## 11. 开发优先级
+
+### Phase 1: 核心架构
+1. Next.js 项目初始化 + TypeScript
+2. Tailwind CSS 配置 + 设计系统
+3. 国际化配置（next-intl）
+4. 路由结构搭建
+
+### Phase 2: 基础组件
+1. 布局组件（Header、Footer）
+2. UI 组件库（Button、Badge、Accordion）
+3. 数据类型定义（lib/data.ts）
+
+### Phase 3: 主要页面
+1. 首页（Hero + 热门方案）
+2. 竞技场页面（筛选 + 排序）
+3. 实践详情页（概览 + Markdown渲染）
+
+### Phase 4: 高级功能
+1. 雷达图可视化
+2. 演示视频嵌入
+3. 动画效果
+4. 完整响应式
+
+---
+
+## 12. 关键文件清单
+
+```
+必须创建的文件：
+├── app/
+│   ├── [locale]/layout.tsx       # 语言布局
+│   ├── [locale]/page.tsx         # 首页
+│   ├── [locale]/arena/page.tsx   # 竞技场
+│   └── [locale]/practice/[id]/page.tsx  # 实践详情
+├── components/
+│   ├── layout/Header.tsx
+│   ├── layout/Footer.tsx
+│   ├── arena/RadarChart.tsx
+│   └── ui/                       # 基础UI组件
+├── lib/
+│   ├── data.ts                   # 核心数据 ⭐
+│   └── utils.ts
+├── locales/
+│   ├── en.json
+│   └── zh.json
+├── i18n.ts
+├── middleware.ts
+└── tailwind.config.ts
+```
+
+---
+
+## 13. 快速验证标准
+
+完成开发后，验证以下功能：
+
+- [ ] 双语切换正常工作
+- [ ] 首页显示热门方案（前6个）
+- [ ] 竞技场页面可筛选和排序
+- [ ] 实践详情页正确渲染 Markdown
+- [ ] 雷达图显示四维指标
+- [ ] 移动端布局正常
+- [ ] 所有链接可点击
+- [ ] GitHub 链接正确
+
+---
+
+## 14. 参考资源
+
+**原始网站**：
+- GitHub: https://github.com/THU-ZJAI/Real-World-AI
+- 实站: https://rwai.org
+
+**关键文档**（原始代码库中）：
+- TEAM_GUIDE.md - 维护指南
+- CONTENT.md - 内容管理指南
+- README.md - 项目说明
+
+---
+
+**文档版本**：1.0
+**最后更新**：2025-01-28

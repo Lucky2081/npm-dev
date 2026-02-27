@@ -1,0 +1,52 @@
+{
+  "name": "rwai-arena",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run sync-content && npm run export-static-data && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "sync-content": "tsx scripts/sync-content.ts",
+    "export-static-data": "tsx scripts/export-static-data.ts",
+    "sync-arena-list": "tsx scripts/sync-arena-list.ts",
+    "sync-csv-sqlite": "python3 scripts/sync_arenas_csv_to_sqlite.py --csv-zh 'Content/Arena/List of Arenas.csv' --csv-en 'Content/Arena/List of Arenas.en.csv' --db Content/Arena/data/rwai-arena.sqlite",
+    "sync-md-sqlite": "python3 scripts/md_to_sqlite.py --db Content/Arena/data/rwai-arena.sqlite --md-dir Content/Arena/data/md --skip-arenas",
+    "check-i18n": "tsx scripts/check-i18n.ts"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.12",
+    "better-sqlite3": "^12.6.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.29.2",
+    "highlight.js": "^11.11.1",
+    "lucide-react": "^0.563.0",
+    "mammoth": "^1.11.0",
+    "next": "^16.1.6",
+    "next-intl": "^4.7.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-markdown": "^10.1.0",
+    "recharts": "^3.7.0",
+    "rehype-highlight": "^7.0.2",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "tailwind-merge": "^3.4.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.0.10",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "@types/xlsx": "^0.0.35",
+    "autoprefixer": "^10.4.23",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.6",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
