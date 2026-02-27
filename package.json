@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "npm run sync-content && npm run sync-csv-sqlite && npm run sync-md-sqlite && npm run export-static-data && next build",
     "start": "next start",
+    "start:static": "npx serve@latest out -l ${PORT:-8080}",
     "lint": "next lint",
     "sync-content": "tsx scripts/sync-content.ts",
     "export-static-data": "tsx scripts/export-static-data.ts",
