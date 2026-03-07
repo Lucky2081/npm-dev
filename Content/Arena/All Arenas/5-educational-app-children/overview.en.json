@@ -1,18 +1,26 @@
 {
-  "highlight": "Build a Children's Educational Fun App Demo in One Week",
-  "industry": "Scientific Research & Education, Culture & Sports",
+  "highlight": "A Q&A app built with no code within one week",
+  "industry": "Science & Education,Culture & Sports",
   "category": "Service",
-  "tech_category": "Natural Language Processing, Text Generation, Intelligent Q&A",
-  "cycle": "Demo Build: Within One Week",
+  "cycle": "Within one week",
   "case_no": "Case251031Y01",
   "sections": [
     {
       "title": "1. Business Highlights",
       "subsections": [
         {
-          "title": "Highlights",
+          "title": "Highlight Cards",
           "content": [
-            "- Build a children's educational app demo in one week"
+            "- A Q&A app built with no code within one week: A demo can be completed by configuring BISHENG step by step",
+            "- Open-source workflow is complete and easy to reuse: The workflow covers core steps such as question generation, interaction, and feedback",
+            "- Complete continuous interaction experience: Supports changing questions, multiple guesses, viewing answers, and challenging the question",
+            "- Suitable as a first project for non-technical users: Parents and education practitioners can also build it with a low barrier"
+          ]
+        },
+        {
+          "title": "Demo",
+          "content": [
+            "(Expected outcome preview. This video was produced by the RWAI team using [Enterprise-grade brief demo video built in two and a half days - verified].)"
           ]
         }
       ]
@@ -21,68 +29,48 @@
       "title": "2. Basic Information",
       "subsections": [
         {
-          "title": "Overview",
+          "title": "2.1 Overview",
           "content": [
-            "- Rapidly build a children's intellectual enlightenment fun application (using brain teasers as an example). Generate unconventional thinking and logical reasoning questions of different types through AI technology."
+            "**Business Background**: Rapidly build a fun children's intellectual enlightenment application, using brain teasers here as an example. AI is used to generate different question types such as unconventional thinking and logical reasoning."
           ]
         },
         {
-          "title": "Classification Tags",
+          "title": "2.2 Classification Tags",
           "content": [
-            "- Industry: Scientific Research & Education, Culture & Sports",
-            "- Application: Service",
-            "- Technology: Natural Language Processing, Text Generation, Intelligent Q&A"
+            "**Industry**: Science & Education, Culture & Sports",
+            "**Category**: Service",
+            "**Technology Category**: Natural Language Processing, Text Generation, Intelligent Q&A"
           ]
         },
         {
-          "title": "Implementation Cycle",
+          "title": "2.3 Implementation Cycle",
           "content": [
-            "- Demo Build: Within one week"
+            "- Demo setup: Within one week"
           ]
         },
         {
-          "title": "Team Composition",
+          "title": "2.4 Team Composition",
           "content": [
-            "- Demo Stage: 1 Business Expert, 1 Algorithm Expert"
+            "- Demo phase: 1 business expert, 1 algorithm expert"
           ]
         },
         {
-          "title": "Business Pain Points",
+          "title": "2.5 Business Pain Points",
           "content": [
-            "- Traditional manual education typically integrates such Q&A into game processes, preventing independent experience and lacking flexibility",
-            "- Manual education makes it difficult for similar Q&A services to reach a broader potential user base",
-            "- Non-technical personnel with educational Q&A experience and knowledge struggle to develop such applications"
+            "- Fully manual education and training usually embeds this kind of Q&A into games, so it cannot be experienced independently and lacks flexibility",
+            "- Manual education and training makes it difficult for similar Q&A services to reach a wider potential user base",
+            "- Non-technical people with education and training Q&A experience and knowledge find it difficult to develop an application on their own"
           ]
         },
         {
-          "title": "Core Functions",
+          "title": "2.6 Core Functions",
           "content": [
-            "- Interaction Support:",
-            "  - Change questions (maintain freshness)",
-            "  - Multiple guesses (encourage attempts)",
-            "  - Ask for answers (immediate feedback)",
-            "  - Challenge questions (cultivate critical thinking)",
-            "- Build a complete intellectual training experience"
-          ]
-        },
-        {
-          "title": "Core Business Metrics",
-          "content": [
-            "- Q&A response latency under 1 second",
-            "- Support up to 5 rounds of continuous interaction with users"
-          ]
-        },
-        {
-          "title": "Core Technical Metrics",
-          "content": [
-            "- Single-round average answer accuracy reaches 90%"
-          ]
-        },
-        {
-          "title": "Other Value Returns",
-          "content": [
-            "- Can serve as the first workflow practice project for LLM enthusiasts",
-            "- Provides a zero-barrier solution for parents in need to build their own fun applications"
+            "- Interaction support:",
+            "- Change the question (to keep it fresh)",
+            "- Multiple guesses (to encourage trying)",
+            "- Ask for the answer (instant feedback)",
+            "- Challenge the question (to develop critical thinking)",
+            "- Builds a complete intellectual training experience."
           ]
         }
       ]
@@ -91,20 +79,45 @@
       "title": "3. Best Practice Version",
       "subsections": [
         {
-          "title": "3.1 Private Deployment - Server Deployment Version",
+          "title": "3.1.1 Reasons for Best Practice Selection",
           "content": [
-            "- Reason for Best Practice Selection: This version has the most complete workflow, simplest setup process, and shortest build time among current open-source solutions. Built on the BISHENG workflow platform, it enables no-code construction of Q&A large models by following step-by-step configuration.",
-            "- Practitioner Information: Real-World AI Repost and Verification",
-            "- Original Author Information: zh",
-            "- Author Website: Hand-craft 100 Workflows [Event] (Last row of the table, author is zh)",
-            "- Related References:",
-            "  - BISHENG(by Bisheng) GitHub: https://github.com/dataelement/bisheng",
-            "  - GLM-4.7(by Zhipu) GitHub: https://github.com/zai-org/GLM-4.5",
-            "- Version Status:",
-            "  - Initial Release Date: 2024-12-xx",
-            "  - Last Updated: 2026-02-02",
-            "  - Last Reviewed: 2026-02-02",
-            "- Implementation Details: https://gvxnc4ekbvn.feishu.cn/wiki/J4ucwrsuJiWRuWkffSpcly50n7d?from=from_copylink"
+            "- Fastest setup: Among current open-source solutions, it offers strong workflow completeness with the simplest setup steps.",
+            "- Zero-code usability: Based on the BISHENG workflow platform, a Q&A app can be completed by configuring it step by step.",
+            "- Complete experience: Covers core interactive links such as changing questions, guessing, and answer support, making it suitable for children's enlightenment scenarios.",
+            "- Highly accessible: Suitable as a first AI app-building project for non-technical users, with low learning and reuse cost."
+          ]
+        },
+        {
+          "title": "3.1.2 Version Information",
+          "content": [
+            "- **Version Type**: Private deployment - server deployment edition",
+            "- **Team Name**: Real-World AI republished and verified",
+            "- **Chinese Name**: /",
+            "- **English Name**: zh",
+            "- **Author Website**: [Build 100 Workflows by Hand [Event]](https://dataelem.feishu.cn/wiki/OJYRwuJzZiUHhhkI4MLcMJvfnzh) (last row of the table, author is zh)",
+            "- **Initial Release Date**: 2024-12",
+            "- **Last Updated**: 2026-02-02",
+            "- **Last Reviewed**: 2026-02-02",
+            "- **Key Dependencies**: BISHENG · GLM"
+          ]
+        },
+        {
+          "title": "3.1.3 Implementation Details",
+          "content": [
+            "[Practice Details](https://gvxnc4ekbvn.feishu.cn/wiki/J4ucwrsuJiWRuWkffSpcly50n7d?from=from_copylink)"
+          ]
+        },
+        {
+          "title": "3.1.4 Metrics",
+          "content": [
+            "**Core Business Metrics**",
+            "- Q&A response latency is below 1 second",
+            "- Supports 5 rounds of continuous interaction with users",
+            "**Core Technical Metrics**",
+            "- Average single-turn answer accuracy reaches 90%",
+            "**Other Value Returns**",
+            "- Can serve as the first workflow-building practice project for large-model enthusiasts",
+            "- Provides parents who need it with a zero-barrier solution for building a fun app for their own use"
           ]
         }
       ]

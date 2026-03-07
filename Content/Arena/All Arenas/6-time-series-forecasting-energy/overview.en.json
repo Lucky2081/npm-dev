@@ -1,17 +1,20 @@
 {
-  "highlight": "Build and validate a Long-term Time Series Forecasting (LTSF) system demo for the energy sector in one week using low-code approach, enabling energy metrics monitoring and early warning",
-  "industry": "Energy Manufacturing",
-  "category": "Operations, Risk Control",
-  "cycle": "3-5 Days",
+  "highlight": "Lower error in long-horizon forecasting",
+  "industry": "Energy & Manufacturing",
+  "category": "Operations,Risk Control",
+  "cycle": "3-5 days",
   "case_no": "Case251125X01",
   "sections": [
     {
       "title": "1. Business Highlights",
       "subsections": [
         {
-          "title": "Highlights",
+          "title": "Highlight Cards",
           "content": [
-            "- Build and validate a Long-term Time Series Forecasting (LTSF) system demo for the energy sector in one week using low-code approach, enabling energy metrics monitoring and early warning"
+            "- Lower error in long-horizon forecasting: MAE is reduced by 5.2% and 3.6% versus iTransformer and PatchTST respectively",
+            "- Zero-shot transfer cost cut in half: Covers data-scarce scenarios without full-scale training",
+            "- Validation demo completed in 3-5 days: Compresses the validation cycle from 2-3 weeks to within 1 week",
+            "- More trustworthy solution selection: Automated benchmarking allows non-algorithm practitioners to judge strengths and weaknesses quickly"
           ]
         }
       ]
@@ -22,54 +25,43 @@
         {
           "title": "2.1 Overview",
           "content": [
-            "**Business Background**: Long-term time series forecasting tasks are widely used in monitoring and early warning scenarios for various feature indicators in energy and other fields, enabling people to detect risks and anomalies in time based on predicted trends and make adjustments accordingly.",
-            "**Solution**: This case targets smart energy scenarios (such as electricity, water, natural gas, etc.), taking historical sequence data of specified features as input, and outputting predicted values for multiple time points in the future long-term period. By introducing the latest 2025 time series models, it captures long-period anomaly states and provides credible decision-making basis for energy scheduling and control."
+            "**Business Background**: Long-horizon time-series forecasting is widely used in scenarios such as monitoring and early warning for various feature indicators in fields like energy, helping people detect risks and anomalies in time based on forecast trends and then make adjustments.",
+            "**Solution**: This example targets smart energy scenarios such as electricity, water, and natural gas. It takes historical sequence data of specified features in the scenario as input and outputs predicted values for multiple future time points over a long period. By introducing the latest time-series models from 2025, it captures long-cycle abnormal states and provides trustworthy decision support for energy scheduling and control."
           ]
         },
         {
           "title": "2.2 Classification Tags",
           "content": [
-            "**Industry**: Energy Manufacturing",
+            "**Industry**: Energy & Manufacturing",
             "**Category**: Operations, Risk Control",
-            "**Technology Category**: Statistical Machine Learning, Large Language Model (LLM), Operations (Testing & Monitoring), Time Series Forecasting"
+            "**Technology Category**: Statistical Machine Learning, Large Language Model (LLM), Operations (Testing & Monitoring), Time-Series Forecasting"
           ]
         },
         {
           "title": "2.3 Implementation Cycle",
           "content": [
-            "- Demo Development: 3-5 Days"
+            "- Demo development: 3-5 days"
           ]
         },
         {
           "title": "2.4 Team Composition",
           "content": [
-            "- Demo Stage: 1 Business Expert, 1 Algorithm Engineer"
+            "- Demo phase: 1 business expert, 1 algorithm engineer"
           ]
         },
         {
           "title": "2.5 Business Pain Points",
           "content": [
-            "- High Cost and Large Error in Manual Prediction: Manual prediction relies on practitioner experience, senior experts are costly, and cannot continuously track and predict multiple indicators simultaneously; ordinary personnel have limited judgment ability with large errors",
-            "- Poor Stability in Long-term Prediction: Existing models show significantly amplified errors as prediction steps increase when forecasting 720+ future time points, failing to capture critical periodicity and sudden anomalies, leading to early warning failures",
-            "- Low Delivery Credibility: Existing technical solutions lack unified automated benchmarking processes, with various organizations producing different comparison report indicators and results, causing difficulties in technology selection and best practices"
+            "- Manual forecasting is costly and error-prone: Manual forecasting depends on practitioner experience, senior experts are expensive, and multiple types of indicators cannot be continuously tracked and predicted at the same time; ordinary staff have limited judgment capability and large errors",
+            "- Poor stability in long-horizon forecasting: Existing models show significantly amplified error when forecasting 720+ future time points as the horizon increases, making it difficult to capture key periodic patterns and sudden anomalies and causing warning failures",
+            "- Low delivery credibility: Existing technical approaches lack a unified automated benchmarking process, and different organizations produce different comparison metrics and results, creating confusion in technology selection and best practices"
           ]
         },
         {
           "title": "2.6 Core Functions",
           "content": [
-            "- Zero-shot Long-term Forecasting: Stably output predicted values for 720+ future time points on unseen new business data",
-            "- Intelligent Ranking and Selection: Automatically compare specified mainstream time series forecasting models, generate ranking results, and provide selection basis"
-          ]
-        },
-        {
-          "title": "2.7 Core Metrics",
-          "content": [
-            "**Core Business Metrics**:",
-            "- Solution selection credibility improved by 10% (compared to algorithm researchers) to 70% (compared to non-algorithm practitioners), enabling business personnel to make quick and accurate choices",
-            "- Solution selection and migration costs reduced by 50%",
-            "- Mean Absolute Error (MAE) < 0.39, reducing losses caused by long-term prediction errors in the energy sector by about 5%",
-            "**Core Technical Metrics**:",
-            "- Mean Absolute Error (MAE) < 0.39"
+            "- Zero-shot long-range forecasting: Stably outputs predicted values for 720+ future time points on unseen new business data",
+            "- Intelligent ranking for solution selection: Automatically compares specified mainstream time-series forecasting models, generates ranking results, and provides a basis for selection"
           ]
         }
       ]
@@ -78,40 +70,43 @@
       "title": "3. Best Practice Version",
       "subsections": [
         {
-          "title": "3.1 Version Information",
+          "title": "3.1.1 Reasons for Best Practice Selection",
           "content": [
-            "- Version Type: Private Deployment - Server Deployment",
-            "- Practitioner Information: Real-World AI Self-developed and Verified",
-            "- Original Author English Name: Real-World AI",
-            "- Author Website: This Site",
-            "- Related References:",
-            "  - Autogluon (by AWS AI) GitHub: https://github.com/autogluon/autogluon",
-            "  - Neuralforecast (by Nixtla) GitHub: https://github.com/Nixtla/neuralforecast",
-            "  - ETT Dataset SOTA Model: https://arxiv.org/pdf/2510.23396",
-            "- Initial Release Date: 2025-11-25",
-            "- Last Updated: 2025-11-25",
-            "- Last Reviewed: 2025-11-26"
+            "- More accurate forecasting: On the industry's core benchmark, MAE is 38.4%, outperforming the mainstream SOTA methods from the previous year.",
+            "- Lighter transfer: Zero-shot performance is close to fully trained solutions, reducing business-side transfer cost by about 50%.",
+            "- Faster decisions: Automated benchmarking helps complete solution selection quickly and significantly improves trustworthiness.",
+            "- More efficient implementation: Under a low-code framework, a demo can be completed in 3-5 days, shortening the validation cycle to within 1 week."
           ]
         },
         {
-          "title": "3.1.2 Reasons for Selection as Best Practice",
+          "title": "3.1.2 Version Information",
           "content": [
-            "**Metric Improvements**:",
-            "- In the industry core benchmark testing for the selected energy scenario, the Mean Absolute Error (MAE) of this solution is 38.4%, which is 5.2% and 3.6% lower than the 2024 SOTA methods iTransformer and PatchTST respectively",
-            "- Based on the above accuracy improvement, it is estimated to reduce business losses caused by long-term prediction errors by about 5%, effectively supporting the business value transformation from 'fuzzy trend prediction' to 'precise quantitative risk control'",
-            "- In Zero-Shot learning, this solution performs comparably to the PatchTST solution requiring full training, reducing business-side migration costs by 50% and quickly covering various data-scarce scenarios",
-            "**Cost Optimization**:",
-            "- Selection and Decision Costs: Solution selection and migration costs reduced by 50%. Through built-in automated benchmarking, solution selection credibility improved by 10% (compared to algorithm researchers) to 70% (compared to non-algorithm practitioners), enabling non-technical background business personnel to quickly and accurately make optimal technical decisions",
-            "- The zero-shot learning capability of this solution is estimated to reduce model cold-start fine-tuning costs and data labeling costs by 50%",
-            "- Due to the low-code nature of the open-source framework, this solution only takes 3-5 days to complete demo development, shortening the validation cycle from 2-3 weeks to within 1 week",
-            "**Additional Information**:",
-            "- The core model EMTSF (MoE) of this solution performs excellently on authoritative public benchmarks such as ETTh1, with Mean Absolute Error (MAE) metrics comprehensively outperforming previous years' models, and was rated as the dual-path SOTA architecture in the 2025 Long-term Time Series Forecasting (LTSF) field"
+            "- **Version Type**: Private deployment - server deployment edition",
+            "- **Team Name**: Real-World AI self-developed and verified",
+            "- **Chinese Name**: /",
+            "- **English Name**: Real-World AI",
+            "- **Author Website**: This site",
+            "- **Initial Release Date**: 2025-11-25",
+            "- **Last Updated**: 2025-11-25",
+            "- **Last Reviewed**: 2025-11-26",
+            "- **Key Dependencies**: Autogluon (by AWS AI) · Neuralforecast (by Nixtla) · ETT dataset SOTA models"
           ]
         },
         {
           "title": "3.1.3 Implementation Details",
           "content": [
-            "To be released"
+            "To be published"
+          ]
+        },
+        {
+          "title": "3.1.4 Metrics",
+          "content": [
+            "**Core Business Metrics**",
+            "- Solution selection credibility improves by 10% compared with algorithm researchers and by up to 70% compared with non-algorithm practitioners, enabling business staff to make choices quickly and accurately",
+            "- Solution selection and transfer cost reduced by 50%",
+            "- Mean Absolute Error (MAE) < 0.39, reducing losses caused by long-horizon forecasting errors in the energy sector by about 5%",
+            "**Core Technical Metrics**",
+            "- Mean Absolute Error (MAE) < 0.39: Same as the core business metric"
           ]
         }
       ]

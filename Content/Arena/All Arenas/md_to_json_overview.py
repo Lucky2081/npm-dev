@@ -220,7 +220,7 @@ def parse_basic_info(section2: str) -> Dict[str, List[str]]:
 def format_reason_lines(lines: List[str]) -> List[str]:
     out: List[str] = []
     ignore_reason_labels = {
-        "待填写",
+        "[待回填]",
         "指标提升",
         "成本优化",
         "补充信息",
@@ -242,7 +242,7 @@ def format_reason_lines(lines: List[str]) -> List[str]:
             out.append(f"- {key}：{value}")
             continue
 
-        out.append(f"- 待填写：{line}")
+        out.append(f"- [待回填]：{line}")
     return out
 
 
@@ -392,17 +392,17 @@ def build_payload(md_text: str) -> Dict[str, object]:
         {
             "title": "亮点卡片",
             "content": [
-                "- 卡片1：待填写",
-                "- 卡片2：待填写",
-                "- 卡片3：待填写",
-                "- 卡片4：待填写",
+                "- [待回填]：[待回填]",
+                "- [待回填]：[待回填]",
+                "- [待回填]：[待回填]",
+                "- [待回填]：[待回填]",
             ],
         }
     ]
     if highlight:
-        payload_highlight = "待填写"
+        payload_highlight = "[待回填]"
     else:
-        payload_highlight = "待填写"
+        payload_highlight = "[待回填]"
     if video_lines:
         section1_subsections.append({"title": "演示", "content": video_lines})
 

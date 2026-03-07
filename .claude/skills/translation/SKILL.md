@@ -1,9 +1,9 @@
 ---
-name: translate
+name: translation
 description: 通用翻译工具。翻译文本或 JSON 内容，支持中译英、英译中等多种语言对。
 ---
 
-# Translate
+# Translation
 
 通用翻译 skill。
 

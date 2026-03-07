@@ -1,17 +1,20 @@
 {
-  "highlight": "Build a conversational assistant Demo with proactive questioning and recommendation capabilities in one week using low-code platform (AI domain)",
-  "industry": "Information Technology, Research & Education",
-  "category": "Service, Operations",
-  "cycle": "Demo Development: <= 7 days",
+  "highlight": "REQ >95% significantly reduces ineffective conversations",
+  "industry": "Information Technology,Science & Education",
+  "category": "Service,Operations",
+  "cycle": "<= 7 days",
   "case_no": "Case251126X01",
   "sections": [
     {
       "title": "1. Business Highlights",
       "subsections": [
         {
-          "title": "Highlights",
+          "title": "Highlight Cards",
           "content": [
-            "- Build a conversational assistant Demo with proactive questioning and recommendation capabilities in one week using low-code platform (AI domain)"
+            "- REQ >95% significantly reduces ineffective conversations: Its proactive follow-up capability is clearly stronger than general-purpose models",
+            "- Requirements clarified in <=3 turns on average: Single-session resolution efficiency improves by 70%",
+            "- Task resolution rate >=90%: Users are more likely to get actionable recommendation results",
+            "- Startup cost reduced by about 80%: Can be implemented with low-code workflows and lightweight models"
           ]
         }
       ]
@@ -22,59 +25,41 @@
         {
           "title": "2.1 Overview",
           "content": [
-            "**Business Background**: In recent years, with the explosion of AI technology and the wave of intelligent transformation across industries, a vast number of non-algorithm practitioners in vertical industries are urgently seeking AI tools that meet their needs and are suitable for them, but it is difficult to achieve this goal through traditional methods.",
-            "**Solution**: Addressing this 'information asymmetry' phenomenon in vertical industries, this example builds an intelligent guidance assistant for AI tool selection in vertical domains. Using an 'expert consultation' approach, it proactively initiates clarifying questions for vague and incomplete natural language queries (such as just entering 'I need a tool for writing documents'), and through limited rounds of dialogue, gradually completes precise AI tool recommendations for users."
+            "**Business Background**: In recent years, with the explosion of AI technology and the wave of intelligent transformation across industries, massive numbers of non-algorithm practitioners in vertical industries urgently want to find AI tools that meet their needs and suit them, but it is difficult to achieve this through traditional methods. In response to this \"information asymmetry\" in vertical industries, this example builds an intelligent guidance assistant for selecting AI tools in vertical domains. Using an \"expert consultation\" style, it proactively asks clarifying follow-up questions in response to vague or incomplete natural-language queries from users, such as \"I want to find a tool for writing documents,\" and gradually delivers precise AI tool recommendations through a limited number of dialogue turns."
           ]
         },
         {
           "title": "2.2 Classification Tags",
           "content": [
-            "**Industry**: Information Technology, Research & Education",
-            "**Application Category**: Service, Operations",
+            "**Industry**: Information Technology, Science & Education",
+            "**Category**: Service, Operations",
             "**Technology Category**: Agent, Large Language Model (LLM), Natural Language Processing (NLP), Knowledge Graph (KG), Intent Understanding, Retrieval-Augmented Generation (RAG)"
           ]
         },
         {
           "title": "2.3 Implementation Cycle",
           "content": [
-            "- Demo Development: <= 7 days"
+            "- Demo development: <= 7 days"
           ]
         },
         {
           "title": "2.4 Team Composition",
           "content": [
-            "- Demo Phase: 1 Business Expert, 1 Algorithm Engineer"
+            "- Demo phase: 1 business expert, 1 algorithm engineer"
           ]
         },
         {
           "title": "2.5 Business Pain Points",
           "content": [
-            "- **Vague Intent Leads to Severe Hallucinations**: Users often cannot accurately describe technical constraints (such as budget, deployment method, specific requirements, etc.). Traditional chatbots are either not flexible enough or make blind guesses and recommendations, resulting in misaligned results (such as recommending expensive enterprise software to individual users), with low usability and confidence.",
-            "- **Inefficient Passive Interaction**: Traditional chatbots tend to output generic rejection texts such as 'insufficient information' when facing inputs beyond the preset range, lacking constructive guidance, causing users to repeatedly try and refine their expressions before the robot can understand their needs.",
-            "- **Poor Conversion Rate and Experience**: Traditional chatbots mostly respond passively, lacking 'expert-level' proactive questioning capabilities. Conversations are easily interrupted, user churn rate is high, making it difficult to form effective business conversions and cross-recommendation opportunities."
+            "- Vague intent leads to serious hallucinations: Users often cannot accurately describe technical constraints such as budget, deployment method, and specific requirements. Traditional chatbots are either not flexible enough or make blind guesses and recommendations, causing mismatched results, such as recommending expensive enterprise software to individual users, with low usability and confidence",
+            "- Low efficiency of passive interaction: When traditional chatbots encounter inputs outside their preset range, they tend to output generic refusal text such as \"insufficient information\" and lack constructive guidance, forcing users to repeatedly probe and refine their wording before the bot can clarify their needs",
+            "- Poor conversion and user experience: Traditional chatbots mostly respond passively and lack expert-level proactive follow-up capability, so conversations are easily interrupted and user churn is high, making it hard to create effective business conversion and cross-recommendation opportunities"
           ]
         },
         {
           "title": "2.6 Core Functions",
           "content": [
-            "- **Proactive Questioning Guidance**: When facing vaguely expressed user needs, the conversational assistant does not answer directly, but refines and clarifies the user's real needs through 1-3 rounds of questioning."
-          ]
-        },
-        {
-          "title": "2.7 Core Business Metrics",
-          "content": [
-            "- Average dialogue rounds <= 3: Reduce ineffective conversations, improve user inquiry process efficiency by 70%",
-            "- Task Success Rate (TSR) >= 90%: The proportion of users who ultimately receive satisfactory recommendations (based on actions taken such as clicking links or positive reviews)",
-            "- First Token Response Latency < 5 seconds"
-          ]
-        },
-        {
-          "title": "2.8 Core Technical Metrics",
-          "content": [
-            "- Task Success Rate (TSR) >= 90%: Same as core business metrics",
-            "- First Token Response Latency < 5 seconds: Same as core business metrics",
-            "- Request Rate (REQ) > 95%: The frequency of the conversational assistant proactively initiating follow-up questions when facing queries with missing information (GPT-4o's value is about 15%), promoting task success rate improvement",
-            "- Question Accuracy (Q-ACC) > 92%: The accuracy of follow-up questions initiated by the conversational assistant in hitting core missing content, high hit rate improves user inquiry process efficiency"
+            "- Follow-up guidance: When users express needs vaguely, the assistant does not answer directly but instead refines and clarifies the user's real needs through 1-3 rounds of follow-up questions"
           ]
         }
       ]
@@ -83,30 +68,46 @@
       "title": "3. Best Practice Version",
       "subsections": [
         {
-          "title": "3.1 Private Deployment - Server Deployment Version",
+          "title": "3.1.1 Reasons for Best Practice Selection",
           "content": [
-            "**Reason for Selection as Best Practice**:",
-            "- **Metric Improvement**: This solution's Request Rate (REQ) indicator is >95%, compared to GPT-4o (about 15%) improving by about 80%. The improvement of this indicator is related to alleviating model hallucinations, thereby promoting Task Success Rate (TSR) >= 90%. This solution's Question Accuracy (Q-ACC) indicator is >92%, average dialogue rounds <= 3, thus significantly reducing ineffective conversations in applications. Compared with the way of interacting with general large models (such as GPT-4o, Gemini 3, etc.) to get final solutions, the efficiency of a single conversation from question to solution is improved by 70%. This solution's first token response latency is <5 seconds, ensuring real-time user response experience.",
-            "- **Cost Optimization**: This solution builds intelligent processes based on a low-code platform, lowering the learning threshold for non-technical personnel, while reducing the number of R&D participants (only 1-2 people needed), reducing startup costs by about 80%. This solution adopts lightweight foundation models (such as Qwen series 15B and below parameter level models) to have complete functions, reducing inference computing costs by about 30%.",
-            "",
-            "**Practitioner Information**:",
-            "- Name: Real-World AI Self-developed and Verified",
-            "",
-            "**Original Author Information**:",
-            "- Chinese Name: /",
-            "- English Name: Real-World AI",
-            "- Author Website: This Site",
-            "",
-            "**Related References**:",
-            "- Coze (by ByteDance): https://www.coze.cn/",
-            "- GLM-4.7 (by Zhipu) GitHub: https://github.com/zai-org/GLM-4.5",
-            "",
-            "**Version Status**:",
-            "- Initial Release Date: 2025-11-26",
-            "- Last Updated: 2026-02-02",
-            "- Last Reviewed: 2026-02-02",
-            "",
-            "**Implementation Details**: To be released"
+            "- More proactive: REQ >95%, enabling it to consistently initiate effective follow-up questions when information is missing.",
+            "- Faster resolution: Follow-up accuracy >92%, with clarification completed in <=3 turns on average, improving conversation efficiency by about 70%.",
+            "- More stable experience: Task solution rate >=90% and first-token latency <5 seconds, making it suitable for real-time consultation scenarios.",
+            "- Lower cost: Can be implemented with a low-code platform plus lightweight models, reducing startup cost by about 80%."
+          ]
+        },
+        {
+          "title": "3.1.2 Version Information",
+          "content": [
+            "- **Version Type**: Private deployment - server deployment edition",
+            "- **Team Name**: Real-World AI self-developed and verified",
+            "- **Chinese Name**: /",
+            "- **English Name**: Real-World AI",
+            "- **Author Website**: This site",
+            "- **Initial Release Date**: 2025-11-26",
+            "- **Last Updated**: 2026-02-02",
+            "- **Last Reviewed**: 2026-02-02",
+            "- **Key Dependencies**: Coze (by ByteDance) · GLM"
+          ]
+        },
+        {
+          "title": "3.1.3 Implementation Details",
+          "content": [
+            "To be published"
+          ]
+        },
+        {
+          "title": "3.1.4 Metrics",
+          "content": [
+            "**Core Business Metrics**",
+            "- Average conversation turns <= 3: Reduce ineffective conversations and improve the user inquiry process by 70%",
+            "- Task Solution Rate (TSR) >= 90%: The proportion of users who ultimately receive satisfactory recommendations, measured based on actions taken such as link clicks or positive ratings",
+            "- First-token response latency < 5 seconds",
+            "**Core Technical Metrics**",
+            "- Task Solution Rate (TSR) >= 90%: Same as the core business metric",
+            "- First-token response latency < 5 seconds: Same as the core business metric",
+            "- Request Rate (REQ) > 95%: How often the assistant proactively initiates follow-up questions when faced with queries missing information (for GPT-4o, this value is about 15%), helping improve the task solution rate (see core business metric)",
+            "- Follow-up Accuracy (Q-ACC) > 92%: The accuracy with which the assistant's follow-up questions hit the core missing information; higher accuracy improves the user inquiry process efficiency (see core business metric)"
           ]
         }
       ]

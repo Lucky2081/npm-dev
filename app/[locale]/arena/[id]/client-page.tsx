@@ -158,6 +158,40 @@ function extractTimeFromDescription(description: string): string {
   return '';
 }
 
+function getNormalizedDependencies(stackText: string): string {
+  if (!stackText) return 'N/A';
+
+  const withoutDeploymentPrefix = stackText.replace(/^[^:：]{1,40}[:：]\s*/, '');
+  const rawParts = withoutDeploymentPrefix
+    .split('+')
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  const normalizedParts = rawParts
+    .flatMap((part) => part.split('/').map((item) => item.trim()).filter(Boolean))
+    .map((item) => {
+      const withoutParen = item.replace(/（[^）]*）|\([^)]*\)/g, '').trim();
+      const withoutVersionSuffix = withoutParen
+        .replace(/\s+v?\d+(?:\.\d+)*(?:\s*(?:pro|max|mini|turbo|lite|plus))?$/i, '')
+        .replace(/-\d+(?:\.\d+)*$/i, '')
+        .trim();
+      return withoutVersionSuffix.replace(/\s{2,}/g, ' ');
+    })
+    .filter(Boolean);
+
+  const uniqueParts: string[] = [];
+  const seen = new Set<string>();
+  for (const part of normalizedParts) {
+    const key = part.toLowerCase();
+    if (!seen.has(key)) {
+      seen.add(key);
+      uniqueParts.push(part);
+    }
+  }
+
+  return uniqueParts.length > 0 ? uniqueParts.join(' · ') : 'N/A';
+}
+
 interface ArenaDetailClientProps {
   arena: Arena;
   locale: string;
@@ -240,7 +274,7 @@ export function ArenaDetailClient({ arena, locale, arenaId: _arenaId, initialCon
 
   const renderActiveTabContent = () => {
     if (activeTab === 'overview' && isTabContentReady(content.overview)) {
-      return <OverviewSection content={content.overview} locale={locale} activeTab={activeTab} setActiveTab={(tab) => setActiveTab(tab as TabType)} />;
+      return <OverviewSection arena={arena} content={content.overview} locale={locale} activeTab={activeTab} setActiveTab={(tab) => setActiveTab(tab as TabType)} />;
     }
     if (activeTab === 'implementation' && isTabContentReady(content.implementation)) {
       return <ImplementationSection content={content.implementation!} locale={locale} />;
@@ -666,7 +700,8 @@ const markdownComponents = {
 };
 
 // Overview Section Component - Original Card-based design
-function OverviewSection({ content, locale, activeTab, setActiveTab }: {
+function OverviewSection({ arena, content, locale, activeTab, setActiveTab }: {
+  arena: Arena;
   content: ArenaTabContent;
   locale: string;
   activeTab: string;
@@ -831,6 +866,10 @@ function OverviewSection({ content, locale, activeTab, setActiveTab }: {
     // Fallback for string content (legacy)
     return parseContentFromMarkdown(content as string);
   })();
+  const includesKeyword = (value: string | undefined, keywords: string[]) => {
+    const lowerValue = (value || '').toLowerCase();
+    return keywords.some((keyword) => lowerValue.includes(keyword.toLowerCase()));
+  };
 
   // Render Business Highlights with EXTRA emphasis
   const renderBusinessHighlightsCard = (section: typeof sections[0]) => {
@@ -1055,11 +1094,6 @@ function OverviewSection({ content, locale, activeTab, setActiveTab }: {
     const findSubsection = (keywordZh: string, keywordEn: string) =>
       section.subsections.find((sub) => (sub.title || '').includes(keywordZh) || (sub.title || '').toLowerCase().includes(keywordEn));
 
-    // Extract deployment version from first subsection title if available
-    const deploymentVersion = (section.subsections[0]?.title || '')
-      .replace(/^[0-9.]+\s*/, '')
-      .trim() || (isChina ? '私部署（服务器版）' : 'Private Deployment (Server)');
-
     // Extract content by keywords from subsection content
     const extractContentByKeywords = (subsection: typeof section.subsections[0] | undefined, keywords: string[]) => {
       if (!subsection) return [];
@@ -1136,9 +1170,10 @@ function OverviewSection({ content, locale, activeTab, setActiveTab }: {
         if (match) {
           const key = match[1].trim().toLowerCase();
           const value = match[2].trim();
-          if (key.includes('称呼') || key.includes('实践者') || key.includes('practitioner')) metadata['practitioner'] = value;
-          else if (key.includes('首发') || key.includes('first release')) metadata['firstReleased'] = value;
-          else if (key.includes('最近更新') || key.includes('last update')) metadata['lastUpdated'] = value;
+          if (includesKeyword(key, ['版本类型', 'version type'])) metadata['versionType'] = value;
+          else if (includesKeyword(key, ['称呼', '实践者', '团队名称', 'team name', 'practitioner', 'practitioner information'])) metadata['practitioner'] = value;
+          else if (includesKeyword(key, ['首发', '初次发布', 'first release', 'initial release date'])) metadata['firstReleased'] = value;
+          else if (includesKeyword(key, ['最近更新', 'last updated', 'last update'])) metadata['lastUpdated'] = value;
         }
       });
       return metadata;
@@ -1147,13 +1182,19 @@ function OverviewSection({ content, locale, activeTab, setActiveTab }: {
     const fallbackInfoContent = allSectionLines.filter((line) => {
       const lower = line.toLowerCase();
       return (
+        lower.includes('团队名称') ||
+        lower.includes('team name') ||
         lower.includes('称呼') ||
         lower.includes('实践者') ||
         lower.includes('practitioner') ||
+        lower.includes('版本类型') ||
+        lower.includes('version type') ||
         lower.includes('首发') ||
         lower.includes('first release') ||
+        lower.includes('initial release date') ||
         lower.includes('最近更新') ||
         lower.includes('last update') ||
+        lower.includes('last updated') ||
         lower.includes('版本状态') ||
         lower.includes('version status') ||
         lower.includes('关联引用') ||
@@ -1165,16 +1206,14 @@ function OverviewSection({ content, locale, activeTab, setActiveTab }: {
     const resolvedInfoContent = infoContent.length > 0 ? infoContent : fallbackInfoContent;
 
     const metadata = parseMetadata(resolvedInfoContent);
+    const deploymentVersion = metadata['versionType'] || (section.subsections[0]?.title || '')
+      .replace(/^[0-9.]+\s*/, '')
+      .trim() || (isChina ? '私部署（服务器版）' : 'Private Deployment (Server)');
     const practitioner = metadata['practitioner'] || 'Real-World AI';
     const firstReleased = metadata['firstReleased'] || '-';
     const lastUpdated = metadata['lastUpdated'] || '-';
 
-    const dependencies = resolvedInfoContent
-      .filter((line) => line.includes('http://') || line.includes('https://'))
-      .map((line) => line.split(/[:：]/)[0].trim())
-      .filter(Boolean)
-      .slice(0, 3)
-      .join(' · ') || 'N/A';
+    const dependencies = getNormalizedDependencies(isChina ? arena.champion : arena.championEn);
 
     // Extract implementation link
     const implementationLink = (detailsContent.length > 0 ? detailsContent : allSectionLines).find(c => c.includes('http'));
@@ -1383,16 +1422,18 @@ function OverviewSection({ content, locale, activeTab, setActiveTab }: {
     }
 
     // Extract subsections
-    const getSubsection = (keyword: string) => {
-      return section.subsections.find(sub => sub.title?.includes(keyword));
+    const getSubsection = (...keywords: string[]) => {
+      return section.subsections.find(sub => includesKeyword(sub.title, keywords));
     };
 
-    const overview = getSubsection('概况');
-    const tags = getSubsection('分类标签');
-    const impl = getSubsection('实施周期');
-    const team = getSubsection('团队构成');
-    const painPoints = getSubsection('业务痛点');
-    const coreFunctions = getSubsection('核心功能');
+    const overview = section.subsections.find((sub) =>
+      includesKeyword(sub.title, ['2.1 概况', '2.1 overview', '概况', 'overview'])
+    );
+    const tags = getSubsection('分类标签', 'classification tags');
+    const impl = getSubsection('实施周期', 'implementation cycle');
+    const team = getSubsection('团队构成', 'team composition');
+    const painPoints = getSubsection('业务痛点', 'business pain points');
+    const coreFunctions = getSubsection('核心功能', 'core functions');
 
     // Parse content items
     const parseBulletPoints = (content: string[]) => {
@@ -1401,9 +1442,14 @@ function OverviewSection({ content, locale, activeTab, setActiveTab }: {
 
     // Extract overview text
     const extractOverviewText = (content: string[]) => {
-      const businessBg = content.find(c => c.includes('业务背景'));
-      const solution = content.find(c => c.includes('解决方案'));
-      return { businessBg: businessBg?.replace(/\*\*业务背景\*\*:?\s*/, '') || '', solution: solution?.replace(/\*\*解决方案\*\*:?\s*/, '') || '' };
+      const businessBackgroundPattern = /^\s*\*\*(业务背景|Business Background)\*\*\s*[:：]/i;
+      const solutionPattern = /^\s*\*\*(解决方案|Solution)\*\*\s*[:：]/i;
+      const businessBg = content.find(c => businessBackgroundPattern.test(c));
+      const solution = content.find(c => solutionPattern.test(c));
+      return {
+        businessBg: businessBg?.replace(businessBackgroundPattern, '') || '',
+        solution: solution?.replace(solutionPattern, '') || '',
+      };
     };
 
     const overviewText = overview ? extractOverviewText(overview.content) : { businessBg: '', solution: '' };

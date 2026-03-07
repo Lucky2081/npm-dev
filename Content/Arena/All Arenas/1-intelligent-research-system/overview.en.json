@@ -1,17 +1,27 @@
 {
-  "highlight": "Build an intelligent research system demo with data collection, knowledge integration, and report generation in one week",
-  "industry": "Information Technology, Finance & Trade, Science & Education",
-  "category": "Service, Operations, Management",
-  "cycle": "One Week",
+  "highlight": "Ranked No. 2 on DeepResearch Bench",
+  "industry": "Information Technology,Science & Education,Finance & Trade",
+  "category": "Service,Operations,Management",
+  "cycle": "3.5-5 days",
   "case_no": "Case251120Y01",
   "sections": [
     {
       "title": "1. Business Highlights",
       "subsections": [
         {
-          "title": "Highlights",
+          "title": "Highlight Cards",
           "content": [
-            "- Build an 1111 intelligent research system demo with data collection, knowledge integration, and report generation in one week"
+            "- Ranked No. 2 on DeepResearch Bench: Achieved a comprehensive score of 51.86 on the authoritative benchmark, with a gap of less than 1.5% from first place",
+            "- Reduce 95% of manual research workload: Automates data collection and information integration, significantly improving research efficiency",
+            "- Reports generated in <=15 minutes: Rapidly outputs structured research documents and supports batch generation",
+            "- Supports open-source large models: Uses cost-effective foundation models such as GLM-4.7, lowering overall cost"
+          ]
+        },
+        {
+          "title": "Demo",
+          "content": [
+            "**[Download is not currently supported for this type of content]**",
+            "(Expected outcome preview. Video material is from [DeerFlow] produced by ByteDance.)"
           ]
         }
       ]
@@ -22,8 +32,8 @@
         {
           "title": "2.1 Overview",
           "content": [
-            "**Business Background**: Intelligent research tasks are widely used in competitive analysis, regulatory review, training and learning scenarios across industries such as finance & trade, consulting & management, public policy, marketing, and enterprise operations, with extensive demand and high usage frequency.",
-            "**Solution**: Based on user-input research topics and keywords, this system automatically collects relevant materials, performs knowledge extraction and integration through intelligent workflows, and ultimately generates and outputs research documents according to predefined templates."
+            "**Business Background**: Intelligent research tasks are widely used in scenarios such as competitive and industry research, supervision and review, and training and learning across industries including finance and trade, consulting and management, public policy, marketing, and enterprise operations. The demand is broad and the usage frequency is extremely high.",
+            "**Solution**: Based on the research topic and keywords entered by the user, this example automatically collects relevant materials, performs knowledge extraction and integration through intelligent workflows, and finally generates and outputs a research document according to a preset template."
           ]
         },
         {
@@ -31,36 +41,36 @@
           "content": [
             "**Industry**: Information Technology, Science & Education, Finance & Trade",
             "**Category**: Service, Operations, Management",
-            "**Technology**: Large Language Model (LLM), Natural Language Processing (NLP), Agent, Retrieval-Augmented Generation (RAG), Text Generation"
+            "**Technology Category**: Large Language Model (LLM), Natural Language Processing (NLP), Agent, Retrieval-Augmented Generation (RAG), Text Generation"
           ]
         },
         {
           "title": "2.3 Implementation Cycle",
           "content": [
-            "- Demo Development: 3.5-5 days"
+            "- Demo development: 3.5-5 days"
           ]
         },
         {
           "title": "2.4 Team Composition",
           "content": [
-            "- Demo Phase: 1 Business Expert, 1 Algorithm Engineer"
+            "- Demo phase: 1 business expert, 1 algorithm engineer"
           ]
         },
         {
           "title": "2.5 Business Pain Points",
           "content": [
-            "- Low efficiency in manual research: Completing a comprehensive research report (such as industry analysis, competitive analysis reports) typically requires professional researchers 1-3 weeks for data collection, organization, analysis, and writing",
-            "- Difficulty in information integration: Faced with massive information sources, manual screening and integration can easily miss important content, and it is difficult to ensure information accuracy and timeliness",
-            "- Inconsistent report formats: Different personnel and institutions have significantly different writing styles and layout requirements, affecting report standardization and consistency",
-            "- High update and maintenance costs: Rapidly changing market environments require continuous investment in updating and maintaining research report versions; forming research teams or inviting experts also incurs additional costs"
+            "- Low efficiency of manual research: Completing a full research report, such as an industry report or competitive analysis report, usually requires professional researchers to spend 1-3 weeks collecting, organizing, analyzing, and writing materials",
+            "- Difficult information integration: When facing massive information sources, manual filtering and integration can easily miss important content, and it is difficult to ensure the accuracy and timeliness of information",
+            "- Inconsistent report formats: Different people and institutions have very different writing styles and layout requirements, affecting report standardization and consistency",
+            "- High update and maintenance costs: Market conditions change rapidly, so manually updating and maintaining research report versions requires continuous investment; building a research team or inviting experts also adds extra cost"
           ]
         },
         {
           "title": "2.6 Core Functions",
           "content": [
-            "- Internet-wide data collection: Automatically collect relevant materials across the internet based on user-input topics and keywords",
-            "- Information integration and analysis: Extract key information from collected candidate materials and generate insights and summaries",
-            "- Automatic report generation: Automatically generate structured research documents according to predefined templates"
+            "- Internet-wide data collection: Automatically collects relevant materials across the internet based on user-entered topics and keywords",
+            "- Information integration and analysis: Extracts key information from collected candidate materials and generates viewpoints and summaries",
+            "- Automatic report generation: Automatically generates structured research documents according to preset templates"
           ]
         }
       ]
@@ -69,27 +79,26 @@
       "title": "3. Best Practice Version",
       "subsections": [
         {
-          "title": "3.1 Version Information",
+          "title": "3.1.1 Reasons for Best Practice Selection",
           "content": [
-            "- Version Type: Private Deployment - Server Deployment",
-            "- Practitioner Information: Real-World AI Self-developed and Verified",
-            "- Original Author English Name: Real-World AI",
-            "- Author Website: This Site",
-            "- Related References: Claude Code (by Anthropic), Metaso MCP (by Metaso Tech), GLM-4.7 (by Zhipu)",
-            "- Initial Release Date: 2025-11-20",
-            "- Last Updated: 2026-02-02",
-            "- Last Reviewed: 2026-02-02"
+            "- Leading performance: Ranked No. 2 among open-source solutions on DeepResearch Bench, with stable and trustworthy generated content suitable for formal business decision-making scenarios.",
+            "- Faster generation: A single report is completed in <=15 minutes, significantly faster than comparable solutions, which generally take >=20 minutes.",
+            "- Lower cost: Supports cost-effective mainstream large models while maintaining performance, reducing overall cost by more than 60%.",
+            "- Enterprise-ready: Template fit is >=95% and format compliance is >=99%, enabling direct use in internal reporting and external materials."
           ]
         },
         {
-          "title": "3.1.2 Reasons for Best Practice Selection",
+          "title": "3.1.2 Version Information",
           "content": [
-            "**Performance Improvement**:",
-            "- This solution achieved a comprehensive score of 51.86 on the Deep Research benchmark DeepResearch Bench, ranking 2nd among all open-source available solutions on the leaderboard as of December 24th (within 1.5% of the 1st place solution tavily-research (51.97)), ensuring accurate and credible report generation, enhancing user experience",
-            "- The solution's average report generation time is ≤15 minutes, 33% faster than salesforce-air-deep-research (average ~20 minutes), improving research efficiency",
-            "**Cost Optimization**:",
-            "- This solution supports using high-performance large models with relatively lower API costs such as GLM-4.7 as the foundation, saving nearly 60% in operational costs",
-            "- This solution achieves report template fit ≥95%, format compliance ≥99%, reducing labor costs by approximately 95% compared to manual solutions (~1 week, requiring communication, research, expert consultation, proofreading, formatting processes)"
+            "- **Version Type**: Private deployment - server deployment edition",
+            "- **Team Name**: Real-World AI self-developed and verified",
+            "- **Chinese Name**: /",
+            "- **English Name**: Real-World AI",
+            "- **Author Website**: This site",
+            "- **Initial Release Date**: 2025-11-20",
+            "- **Last Updated**: 2026-02-02",
+            "- **Last Reviewed**: 2026-02-02",
+            "- **Key Dependencies**: Claude Code · Metaso MCP · GLM"
           ]
         },
         {
@@ -101,12 +110,12 @@
         {
           "title": "3.1.4 Metrics",
           "content": [
-            "**Core Business Metrics**:",
-            "- Single document research accuracy: Report template fit ≥95%, format compliance ≥99%, streamlining format revision processes",
-            "- Single document review time: Reduced to under 15 minutes (manual requires 1 week), supporting large-scale, stable batch generation",
-            "- Single document labor cost: Combined with the above efficiency metrics and technical metrics below, can reduce manual operation and review costs by 95%, improving user experience",
-            "**Core Technical Metrics**:",
-            "- Single document research performance comprehensive evaluation: DeepResearch Bench comprehensive score ≥51, ensuring generated report credibility"
+            "**Core Business Metrics**",
+            "- Single-document research accuracy: Report template fit >=95% and format compliance >=99%, improving processes such as format revision",
+            "- Single-document review time: Reduced to within 15 minutes (manual work requires 1 week), supporting large-scale and stable batch generation",
+            "- Single-document labor cost: Combined with the efficiency indicators above and the technical indicators below, manual operation and review cost can be reduced by 95%, improving user experience",
+            "**Core Technical Metrics**",
+            "- Comprehensive evaluation of single-document research performance: DeepResearch Bench comprehensive score >=51, ensuring the credibility of generated reports"
           ]
         }
       ]

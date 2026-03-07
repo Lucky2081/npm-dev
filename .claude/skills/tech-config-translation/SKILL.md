@@ -1,9 +1,9 @@
 ---
-name: translate-tech-config-en
+name: tech-config-translation
 description: 读取 tech-configuration.zh.json，翻译得到 tech-configuration.en.json。保持 JSON 结构一致。每次处理一条数据。
 ---
 
-# Translate Tech Config En
+# Tech Config Translation
 
 翻译技术配置 JSON 从中文到英文。
 
@@ -77,8 +77,8 @@ description: 读取 tech-configuration.zh.json，翻译得到 tech-configuration
 
 ```bash
 # 调用 skill 翻译下一条
-$translate-tech-config-en
+$tech-config-translation
 
 # 指定 arena-folder
-$translate-tech-config-en --folder 1-intelligent-research-system
+$tech-config-translation --folder 1-intelligent-research-system
 ```

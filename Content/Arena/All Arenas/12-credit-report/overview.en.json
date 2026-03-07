@@ -1,17 +1,20 @@
 {
-  "highlight": "Build an intelligent credit report generation system demo for banks in one week with low-code, featuring multi-source data integration, compliance verification, and one-click credit report generation",
+  "highlight": "Credit reports generated within 15 minutes",
   "industry": "Finance & Trade",
-  "category": "Service, Operations",
-  "cycle": "One Week",
+  "category": "Service,Operations",
+  "cycle": "<=7 days",
   "case_no": "Case260107X02",
   "sections": [
     {
       "title": "1. Business Highlights",
       "subsections": [
         {
-          "title": "Highlights",
+          "title": "Highlight Cards",
           "content": [
-            "- Build an intelligent credit report generation system demo for banks in one week with low-code, featuring multi-source data integration, compliance verification, and one-click credit report generation"
+            "- Credit reports generated within 15 minutes: 160x more efficient than manual drafting",
+            "- Evaluation score improved by more than 41%: Ranked first among the compared solutions",
+            "- Template coverage >=95%: Content accuracy >90%, allowing direct entry into the review process",
+            "- Operating cost reduced by nearly 60%: Compatible with cost-effective models such as MiniMax-M2 and GLM-4.7"
           ]
         }
       ]
@@ -22,67 +25,46 @@
         {
           "title": "2.1 Overview",
           "content": [
-            "**Business Background**: Credit business is the core profit source for banks, but report writing runs through the entire process of due diligence, approval, and post-loan management, requiring significant manpower for data collection and text organization. It faces challenges such as complex data sources, inconsistent templates, and varying levels of expertise, leading to low business efficiency and high credit decision risks.",
-            "**Solution**: This case is based on vertical large models, integrating Agent, RAG, OCR and other technologies to build an automated report generation demo. Through seamless multi-source data integration, structured content generation, and compliance verification, it quickly outputs reliable and usable credit reports (credit approval/due diligence/post-loan types), helping banks improve efficiency and reduce risks in credit business."
+            "**Business Background**: Credit business is a core profit source for banks, but report writing runs through the entire process from due diligence and approval to post-loan management. It requires extensive manual work for data collection and text organization, while also facing issues such as fragmented data sources, non-uniform templates, and uneven professionalism, leading to low business efficiency and high credit decision risk. Based on a vertical large model and integrated with technologies such as Agent, RAG, and OCR, this case builds an automated report generation demo that quickly outputs trustworthy and usable credit reports, including credit granting, due diligence, and post-loan types, through seamless multi-source data integration, structured content generation, and compliance checks, helping banks improve efficiency and reduce risk in credit operations."
           ]
         },
         {
           "title": "2.2 Classification Tags",
           "content": [
             "**Industry**: Finance & Trade",
-            "**Application Category**: Service, Operations",
+            "**Category**: Service, Operations",
             "**Technology Category**: Large Language Model (LLM), Agent, Retrieval-Augmented Generation (RAG), Optical Character Recognition (OCR)"
           ]
         },
         {
           "title": "2.3 Implementation Cycle",
           "content": [
-            "- Demo Development: ≤7 days"
+            "- Demo development: <=7 days"
           ]
         },
         {
           "title": "2.4 Team Composition",
           "content": [
-            "- Demo Phase: 1 Business (Credit) Expert, 1 Algorithm Engineer"
+            "- Demo phase: 1 business (credit) expert, 1 algorithm engineer"
           ]
         },
         {
           "title": "2.5 Business Pain Points",
           "content": [
-            "- **Low Manual Writing Efficiency**: Report writing involves significant data handling and text organization work, time-consuming and labor-intensive, occupying core business manpower",
-            "- **High Data Integration Difficulty**: Multi-source heterogeneous data from internal systems, third-party business/credit data, and paper financial statements/collateral materials are difficult to integrate efficiently and prone to errors",
-            "- **Inconsistent Templates and Expertise**: Different banks/departments have varying report templates; some personnel lack professional financial and industry analysis capabilities, affecting report accuracy and decision reliability",
-            "- **Cumbersome Review Process**: Inconsistent report output standards require significant time for manual review and corrections, making process automation difficult"
+            "- Low efficiency of manual writing: Report writing involves extensive data transfer and text organization, which is time-consuming and labor-intensive and occupies core business manpower",
+            "- Difficult data integration: Multi-source heterogeneous data such as internal banking system data, third-party business registration and credit data, and paper financial statements and collateral materials are difficult to integrate efficiently and are prone to errors",
+            "- Non-uniform templates and professionalism: Report templates vary greatly across different banks and departments, and some staff lack professional financial and industry analysis capability, affecting report accuracy and decision reliability",
+            "- Cumbersome review process: Non-standardized report outputs require large amounts of manual review and correction time, making process automation difficult"
           ]
         },
         {
           "title": "2.6 Core Functions",
           "content": [
-            "- **Multi-source Data Auto-Integration**: Supports integration of internal private data, financial data sources, third-party business/credit/tax data, combined with OCR technology to parse paper documents, enabling one-click data entry and verification",
-            "- **Custom Template Adaptation**: Supports personalized report template configuration and optimization for banks, covering multiple credit scenarios including credit approval, due diligence, and post-loan risk assessment",
-            "- **Automatic Report Generation**: Intelligently decomposes report chapter tasks, automatically matches bank templates, completes 800+ objective data filling and 15+ analysis paragraph generation",
-            "- **Data Traceability and Compliance Verification**: Built-in multi-source data verification and financial compliance review rules, provides data reference traceability, ensuring report content is compliant and trustworthy",
-            "- **Human-Machine Collaborative Editing**: Supports report refinement, manual online fine-tuning, and format layout improvement, meeting personalized modification needs"
-          ]
-        },
-        {
-          "title": "2.7 Core Business Metrics",
-          "content": [
-            "- **Response Latency < 10 seconds**: Time from data upload to first content generation of report draft",
-            "- **Report Coverage Rate ≥95%**: Automatic generation of core chapters (equity structure, credit rating, interbank cooperation, etc.), improving content coverage completeness",
-            "- **Report Content Accuracy > 90%**: Accuracy ratio of core data and analysis content in reports after data and text verification",
-            "- **Task Resolution Rate (TSR) >90%**: Proportion of generated reports that meet submission/review requirements after simple manual fine-tuning",
-            "- Combining the above metrics, intelligent report generation efficiency is expected to increase by 160 times compared to traditional manual entry and writing modes"
-          ]
-        },
-        {
-          "title": "2.8 Core Technical Metrics",
-          "content": [
-            "- **OCR Field Extraction Accuracy > 95%**: Accuracy of key information recognition and extraction from paper documents (financial statements/collateral materials)",
-            "- **Agent Task Decomposition Accuracy > 92%**: Core target hit accuracy of intelligent agents in decomposing report chapter generation tasks",
-            "- **Risk Recall Rate > 99.5%**: Recall ratio covering 5 major categories and 31 types of risk intentions",
-            "- **Multi-source Data Integration Success Rate > 98%**: Effective access and integration ratio of multi-source data from internal, third-party, and local documents",
-            "- **Follow-up Question Accuracy (Q-ACC) >90%**: Core requirement hit accuracy for intelligently initiating supplementary information follow-up questions in data-missing scenarios"
+            "- Automatic integration of multi-source data: Supports integration with internal private data, financial data sources, and third-party business registration, credit, and tax data, and combines OCR to parse paper documents for one-click data entry and verification",
+            "- Custom template adaptation: Supports configuration and tuning of bank-specific report templates, covering multiple credit scenarios such as credit granting, due diligence, and post-loan risk assessment",
+            "- Automatic report generation: Intelligently breaks down report chapter tasks, automatically matches bank templates, and completes 800+ objective data fills and 15+ analytical paragraph generations",
+            "- Data traceability and compliance checks: Built-in multi-source data verification and financial compliance review rules provide source traceability for cited data to ensure report content is compliant and trustworthy",
+            "- Human-in-the-loop editing: Supports report polishing, manual online fine-tuning, and layout refinement to meet personalized modification needs"
           ]
         }
       ]
@@ -91,35 +73,49 @@
       "title": "3. Best Practice Version",
       "subsections": [
         {
-          "title": "3.1 Private Deployment - Server Deployment Version",
+          "title": "3.1.1 Reasons for Best Practice Selection",
           "content": [
-            "**Reason for Selection as Best Practice**:",
-            "",
-            "**Metric Improvements**:",
-            "- Generation Accuracy: The original manual + semi-automatic generation solution scored about 35 on the evaluation set built by our team based on practical experience, while this solution scored 49, an improvement of over 41%, ranking first among all participating solutions.",
-            "- Generation Efficiency: The original manual credit report writing takes an average of 5 working days (about 40 hours), while this solution generates reports in an average of ≤15 minutes, 33% shorter than the current industry intelligent process average generation time (about 20 minutes), significantly compressing the report production cycle; compared to manual review mode, intelligent report generation efficiency is improved by 160 times.",
-            "",
-            "**Cost Optimization**:",
-            "- Operating Cost: This solution is compatible with base models such as MiniMax-M2 and GLM-4.7, reducing operating costs by nearly 60%.",
-            "- Labor Cost: The original manual solution requires 1+ week with multi-position collaboration (communication, research, proofreading, etc.), while this solution achieves report template coverage ≥95% and content accuracy > 90%, significantly saving human collaboration and composite time, reducing costs by about 80% compared to traditional mode.",
-            "",
-            "**Practitioner Information**:",
-            "- Name: Real-World AI Self-developed and Verified",
-            "",
-            "**Original Author Information**:",
-            "- Chinese Name: /",
-            "- English Name: Real-World AI",
-            "- Author Website: This Site",
-            "",
-            "**Related References**:",
-            "- To be updated",
-            "",
-            "**Version Status**:",
-            "- Initial Release Date: 2026-01-07",
-            "- Last Updated: 2026-02-02",
-            "- Last Reviewed: 2026-02-02",
-            "",
-            "**Implementation Details**: To be released"
+            "- Leading quality: In the team's self-built evaluation set, the score improved from about 35 to 49, an increase of more than 41%, ranking first.",
+            "- Faster generation: A single credit report is completed within 15 minutes, improving efficiency by about 160x compared with the manual process.",
+            "- Lower cost: Compatible with cost-effective foundation models, reducing overall operating cost by nearly 60%.",
+            "- Deliverable output: Template coverage >=95% and content accuracy >90%, significantly reducing manual collaboration cost."
+          ]
+        },
+        {
+          "title": "3.1.2 Version Information",
+          "content": [
+            "- **Version Type**: Private deployment - server deployment edition",
+            "- **Team Name**: Real-World AI self-developed and verified",
+            "- **Chinese Name**: /",
+            "- **English Name**: Real-World AI",
+            "- **Author Website**: This site",
+            "- **Initial Release Date**: 2026-01-07",
+            "- **Last Updated**: 2026-02-02",
+            "- **Last Reviewed**: 2026-02-02",
+            "- **Key Dependencies**: To be updated"
+          ]
+        },
+        {
+          "title": "3.1.3 Implementation Details",
+          "content": [
+            "To be published"
+          ]
+        },
+        {
+          "title": "3.1.4 Metrics",
+          "content": [
+            "**Core Business Metrics**",
+            "- Response latency < 10 seconds: Time from data upload to the response of the first section of the draft report",
+            "- Report coverage >=95%: Automatic generation of core sections such as equity structure, credit standing, and financial industry cooperation, improving completeness of content coverage",
+            "- Report content accuracy > 90%: The accuracy ratio of core data and analytical content in the report after data and text validation",
+            "- Task Solution Rate (TSR) >90%: The proportion of generated reports that can meet submission or review requirements after light manual fine-tuning",
+            "- Based on the above metrics overall, the expected report generation efficiency is 160x higher than the traditional manual input and writing model",
+            "**Core Technical Metrics**",
+            "- OCR field extraction accuracy > 95%: Accuracy of recognizing and extracting key information from paper documents such as financial statements and collateral materials",
+            "- Agent task decomposition accuracy > 92%: Accuracy with which the agent hits the core objectives when splitting report chapter generation tasks",
+            "- Risk recall rate > 99.5%: Recall ratio covering 31 risk intents across 5 major categories",
+            "- Multi-source data integration success rate > 98%: Proportion of effective access to and integration of internal, third-party, and local document data",
+            "- Follow-up Accuracy (Q-ACC) >90%: Accuracy with which intelligently initiated follow-up questions hit core needs when data is missing"
           ]
         }
       ]

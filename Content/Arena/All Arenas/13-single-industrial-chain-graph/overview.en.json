@@ -1,17 +1,20 @@
 {
-  "highlight": "Complete the full-process construction of a single national industrial chain knowledge graph in one week using low-code, covering the entire hierarchy of 'resources - materials - components - products - services', integrated with multi-source data automation, intelligent relationship mining, and dynamic visualization capabilities",
-  "industry": "Finance & Trade, Energy & Manufacturing",
-  "category": "Service, Operations",
-  "cycle": "Demo Development: ≤7 days",
+  "highlight": "Industrial chain graph built in 7 days",
+  "industry": "Finance & Trade,Energy & Manufacturing",
+  "category": "Service,Operations",
+  "cycle": "<=7 days",
   "case_no": "Case260113X01",
   "sections": [
     {
       "title": "1. Business Highlights",
       "subsections": [
         {
-          "title": "Highlights",
+          "title": "Highlight Cards",
           "content": [
-            "- Complete the full-process construction of a single national industrial chain knowledge graph in one week using low-code, covering the entire hierarchy of 'resources-materials-components-products-services', integrated with multi-source data automation, intelligent relationship mining, and dynamic visualization capabilities"
+            "- Industrial chain graph built in 7 days: 25x more efficient than the traditional 2-month process",
+            "- Graph accuracy reaches 89.32%: About 20% higher than traditional manual plus machine learning solutions",
+            "- Delivered by a team of only 2 people: Labor cost reduced by about 80%",
+            "- Covers 230 million industrial product records: Relationships among tens of millions of enterprises can be brought into unified analysis"
           ]
         }
       ]
@@ -20,69 +23,42 @@
       "title": "2. Basic Information",
       "subsections": [
         {
-          "title": "2.1 Overview",
-          "content": [
-            "**Business Background**: Industrial chain knowledge graphs are core tools for industrial planning, investment attraction, and risk management. However, traditional construction models face challenges such as long cycles, scattered data, and delayed updates, making it difficult to adapt to complex industrial ecosystem analysis needs at the national level.",
-            "**Solution**: This case integrates knowledge graph frameworks, low-code development platforms, and multi-source data interfaces. Through template-based configuration, automatic information extraction, and human-machine collaborative verification, it can complete node organization, relationship construction, visualization presentation, and analysis report generation for a single national industrial chain within 7 days. It covers 230 million+ digital industrial products and 10 million+ core enterprise data, suitable for various industrial scenarios such as new energy, high-end manufacturing, and electronic information."
-          ]
-        },
-        {
           "title": "2.2 Classification Tags",
           "content": [
             "**Industry**: Finance & Trade, Energy & Manufacturing",
             "**Category**: Service, Operations",
-            "**Technology**: Large Language Model (LLM), Knowledge Graph (KG), Agent, Natural Language Processing (NLP), Named Entity Recognition, Relation Extraction, Visualization & Design"
+            "**Technology Category**: Large Language Model (LLM), Knowledge Graph (KG), Agent, Natural Language Processing (NLP), Named Entity Recognition, Relation Extraction, Visualization and Design"
           ]
         },
         {
           "title": "2.3 Implementation Cycle",
           "content": [
-            "- Demo Development: ≤7 days"
+            "- Demo development: <=7 days"
           ]
         },
         {
           "title": "2.4 Team Composition",
           "content": [
-            "- Demo Phase: 1 Industrial Analyst, 1 Data Verification Specialist"
+            "- Demo phase: 1 industry analyst, 1 data validation specialist"
           ]
         },
         {
           "title": "2.5 Business Pain Points",
           "content": [
-            "- Long construction cycle: Traditional national industrial chain knowledge graph construction takes 2 months, relying heavily on manual organization, making it difficult to quickly respond to industrial dynamic changes",
-            "- Difficult data integration: National-level industrial data is scattered across official statistics, industry associations, commercial databases, and other channels, making heterogeneous data difficult to integrate uniformly",
-            "- Imprecise relationship mining: Complex relationships such as industrial chain upstream/downstream, equity, and technical cooperation rely on manual judgment, easily missing key connections and potential risk points",
-            "- High maintenance costs: Industrial nodes and relationships continue to iterate with policy and market changes; traditional models have long update cycles and high maintenance labor costs"
+            "- Long construction cycle: Building a nationwide industrial chain graph traditionally takes 2 months and depends on extensive manual organization, making it difficult to respond quickly to changes in industrial dynamics",
+            "- Difficult data integration: Nationwide industrial data is scattered across official statistics, industry associations, commercial databases, and other channels, and heterogeneous data is difficult to integrate in a unified way",
+            "- Inaccurate relationship mining: Complex relationships such as upstream and downstream links, equity ownership, and technology cooperation rely on manual judgment, making it easy to miss key connections and potential risk points",
+            "- High maintenance cost: Industrial nodes and relationships continue to change with policy and market shifts, while traditional modes have long update cycles and high maintenance labor cost"
           ]
         },
         {
           "title": "2.6 Core Functions",
           "content": [
-            "- Low-code template configuration: Provides 30+ industry graph templates, supports custom node types, relationship rules, and visualization styles",
-            "- Intelligent graph generation: Automatically extracts industrial entities (enterprises, products, technologies), mines association relationships, and constructs 'six-dimensional hierarchy' (resources-materials-components-products-services-data) graphs",
-            "- Dynamic visualization and interaction: Generates interactive graph dashboards, supports geographic distribution layers, value flow annotations, enterprise competitive landscape display, and supports node drilling and multi-dimensional filtering",
-            "- Intelligent analysis report export: Built-in industrial chain value distribution, key node identification, risk transmission simulation functions, one-click export of industrial analysis reports and graph visualization files",
-            "- Rapid update iteration: Supports incremental data updates and automatic relationship verification, can complete a full graph update weekly, responding to industrial dynamic changes"
-          ]
-        },
-        {
-          "title": "2.7 Core Business Metrics",
-          "content": [
-            "- Graph construction cycle ≤7 days: Full process time from data ingestion to final graph delivery",
-            "- Entity coverage rate ≥92%: Proportion of covering national target industrial chain core segments, enterprises, products, and other entities",
-            "- Relationship mining rate >90%: Proportion of correctly mined upstream/downstream, cooperation, equity, and other relationships from the graph",
-            "- Data update response time <24 hours: Time to complete graph updates after new data or policy changes",
-            "- Custom dimension analysis time <3 seconds: Response speed after users initiate specific dimension analysis (such as regional distribution, technology routes)",
-            "- Low-code configuration efficiency improvement >80%: Efficiency improvement ratio of graph template configuration and adjustment compared to traditional coding development"
-          ]
-        },
-        {
-          "title": "2.8 Core Technical Metrics",
-          "content": [
-            "- Entity extraction accuracy >93%: Accuracy of industrial entity recognition and disambiguation based on large models",
-            "- Relation extraction F1 score >91%: Comprehensive evaluation metric for industrial chain complex relationship mining",
-            "- Data integration success rate >98%: Proportion of effective access and integration of multi-source heterogeneous data sources",
-            "- Graph visualization concurrent support >1000 users: User capacity simultaneously viewing and operating the graph online"
+            "- Low-code template-based configuration: Provides 30+ industry graph templates and supports custom node types, relation rules, and visualization styles",
+            "- Intelligent graph generation: Automatically extracts industrial entities such as enterprises, products, and technologies, mines related relationships, and builds a \"six-dimensional hierarchy\" graph of resources - materials - components - products - services - data",
+            "- Dynamic visualization and interaction: Generates an interactive graph dashboard supporting geographic distribution layers, value-flow annotations, enterprise competition landscape display, node drill-down, and multidimensional filtering",
+            "- Intelligent analysis report export: Built-in capabilities for industrial chain value distribution, key node identification, and risk transmission simulation allow one-click export of industrial analysis reports and graph visualization files",
+            "- Rapid update iteration: Supports incremental data updates and automatic relation verification, enabling one full-graph update every week to respond to changes in industrial dynamics"
           ]
         }
       ]
@@ -91,38 +67,49 @@
       "title": "3. Best Practice Version",
       "subsections": [
         {
-          "title": "3.1 Private Deployment - Server Deployment",
-          "subsections": [
-            {
-              "title": "3.1.1 Version Information",
-              "content": [
-                "- Version Type: Private Deployment - Server Deployment",
-                "- Practitioner Information: Real-World AI Self-developed and Verified",
-                "- Original Author English Name: Real-World AI",
-                "- Author Website: This Site",
-                "- Initial Release Date: 2026-01-13",
-                "- Last Updated: 2026-02-02",
-                "- Last Reviewed: 2026-02-02",
-                "- Version Number: Case260113X01"
-              ]
-            },
-            {
-              "title": "3.1.2 Reasons for Best Practice Selection",
-              "content": [
-                "**Performance Improvement**:",
-                "- Performance: The graph constructed by this solution achieves an accuracy of 89.32%, improving accuracy by approximately 20% compared to manual combined with machine learning and traditional information extraction strategies. The constructed graph covers 230 million digital industrial products and 10 million enterprise data, with data comprehensiveness leading in the industry.",
-                "- Efficiency: Traditional national industrial chain knowledge graph construction requires multi-person collaboration over 2 months; this solution compresses construction time to 7 days, improving efficiency by 25 times, significantly shortening industrial analysis decision cycles.",
-                "**Cost Optimization**:",
-                "- Traditional models require 10+ person teams for medium to long-term collaboration; this solution only requires a 2-person team to complete, reducing labor costs by approximately 80%.",
-                "- Can adopt open-source foundation large models and low-code platforms, reducing operational costs by 60% compared to traditional technical solutions."
-              ]
-            },
-            {
-              "title": "3.1.3 Implementation Details",
-              "content": [
-                "To be released"
-              ]
-            }
+          "title": "3.1.1 Reasons for Best Practice Selection",
+          "content": [
+            "- More accurate graphs: Construction accuracy reaches 89.32%, about 20% higher than traditional manual plus machine learning solutions.",
+            "- Faster delivery: A national-scale industrial chain graph can be compressed from 2 months to 7 days, a 25x efficiency improvement.",
+            "- Lower cost: Delivery requires only a 2-person team, reducing labor cost by about 80%.",
+            "- More complete data: Covers 230 million industrial products and data from tens of millions of enterprises, making it suitable for industrial analysis and decision-making scenarios."
+          ]
+        },
+        {
+          "title": "3.1.2 Version Information",
+          "content": [
+            "- **Version Type**: Private deployment - server deployment edition",
+            "- **Team Name**: Real-World AI self-developed and verified",
+            "- **Chinese Name**: /",
+            "- **English Name**: Real-World AI",
+            "- **Author Website**: This site",
+            "- **Initial Release Date**: 2026-01-13",
+            "- **Last Updated**: 2026-02-02",
+            "- **Last Reviewed**: 2026-02-02",
+            "- **Version Number**: Case260113X01"
+          ]
+        },
+        {
+          "title": "3.1.3 Implementation Details",
+          "content": [
+            "To be published"
+          ]
+        },
+        {
+          "title": "3.1.4 Metrics",
+          "content": [
+            "**Core Business Metrics**",
+            "- Graph construction cycle <=7 days: End-to-end time from data access to final graph delivery",
+            "- Entity coverage >=92%: Coverage ratio of core links, enterprises, products, and other entities in the target national industrial chain",
+            "- Relationship mining rate > 90%: Ratio of correctly mining upstream/downstream, cooperation, equity, and other relationships from the graph",
+            "- Data update response time < 24 hours: Time required to complete graph updates after new data or policy changes",
+            "- Analysis time for custom dimensions < 3 seconds: Response speed after users initiate analysis on specific dimensions such as regional distribution or technology routes",
+            "- Low-code configuration efficiency improvement > 80%: Efficiency improvement ratio for graph template configuration and adjustment compared with traditional coded development",
+            "**Core Technical Metrics**",
+            "- Entity extraction accuracy > 93%: Accuracy of industrial entity recognition and disambiguation based on large models",
+            "- Relation extraction F1 score > 91%: Comprehensive evaluation metric for mining complex industrial chain relationships",
+            "- Data integration success rate > 98%: Proportion of effective access to and integration of multi-source heterogeneous data",
+            "- Supported concurrent graph visualization users > 1000: User capacity for simultaneous online viewing and operation of the graph"
           ]
         }
       ]

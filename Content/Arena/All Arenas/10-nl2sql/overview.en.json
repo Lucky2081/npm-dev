@@ -1,17 +1,20 @@
 {
-  "highlight": "Rapidly build a large model that generates SQL scripts via conversation",
+  "highlight": "BIRD execution accuracy reaches 75.63%",
   "industry": "Information Technology",
   "category": "Service",
-  "cycle": "One Week",
+  "cycle": "2-4 days",
   "case_no": "Case251031X02",
   "sections": [
     {
       "title": "1. Business Highlights",
       "subsections": [
         {
-          "title": "Highlights",
+          "title": "Highlight Cards",
           "content": [
-            "- Rapidly build a large model that generates SQL scripts via conversation"
+            "- BIRD execution accuracy reaches 75.63%: This open-source NL2SQL solution has reached SOTA-level performance",
+            "- Spider Test EX reaches 89.65%: Complex SQL generation capability is in the top tier",
+            "- Reproducible setup completed in 2-4 days: Includes the BIRD reproduction and evaluation workflow",
+            "- Lower the barrier to using SQL: Natural language can generate high-quality query scripts"
           ]
         }
       ]
@@ -22,57 +25,42 @@
         {
           "title": "2.1 Overview",
           "content": [
-            "**Business Background**: Convert user query requirements described in natural language into SQL query statements.",
-            "**Solution**: Use the XiYanSQL-QwenCoder model series, which is currently the open-source SOTA for NL2SQL tasks, to rapidly build a large model that generates SQL scripts via conversation."
+            "**Business Background**: Convert user query requirements described in natural language into SQL statements."
           ]
         },
         {
           "title": "2.2 Classification Tags",
           "content": [
             "**Industry**: Information Technology",
-            "**Application Category**: Service",
-            "**Technology Category**: Large Language Model (LLM), Natural Language Processing, Data Governance, Foundation Model, Model Evaluation, NL2SQL, Database, Operations"
+            "**Category**: Service",
+            "**Technology Category**: Large Language Model (LLM), Natural Language Processing, Data Governance, Foundation Large Model, Model Evaluation, NL2SQL, Database, Operations"
           ]
         },
         {
           "title": "2.3 Implementation Cycle",
           "content": [
-            "- Demo Development: 2-4 days"
+            "- Demo development: 2-4 days"
           ]
         },
         {
           "title": "2.4 Team Composition",
           "content": [
-            "- Demo Phase: 1 Business Expert, 1 Algorithm Expert"
+            "- Demo phase: 1 business expert, 1 algorithm expert"
           ]
         },
         {
           "title": "2.5 Business Pain Points",
           "content": [
-            "- Traditional database operations require dedicated operations personnel or database administrators, with high requirements for SQL language proficiency; algorithm personnel who need specific data also face learning costs for SQL language",
-            "- Traditional manual approval processes are cumbersome and inefficient",
-            "- High data flow and large data volumes bring additional challenges to the task"
+            "- Traditional database operations require specialized operations staff or database administrators and demand strong SQL skills; algorithm practitioners who need specific data also face the cost of learning SQL",
+            "- Traditional manual approval workflows are cumbersome and inefficient",
+            "- High data movement and large data volumes create additional challenges for the task"
           ]
         },
         {
           "title": "2.6 Core Functions",
           "content": [
-            "- **User Instruction Understanding**: Accurately understand SQL language generation requirements expressed in user's natural language",
-            "- **Optimal SQL Script Generation**: Filter and obtain multiple candidate SQL instruction patterns based on user requirements, integrate, check, and sort them, and return the optimal result"
-          ]
-        },
-        {
-          "title": "2.7 Core Business Metrics",
-          "content": [
-            "- Time to generate a single SQL script does not exceed 1 second",
-            "- Average accuracy of generated SQL scripts reaches 95%",
-            "- Reduce labor costs by 50%"
-          ]
-        },
-        {
-          "title": "2.8 Core Technical Metrics",
-          "content": [
-            "- Consistent with business metrics"
+            "- User instruction understanding: Accurately understands the user's SQL generation requirements expressed in natural language",
+            "- Best SQL script generation: Filters and retrieves multiple candidate SQL instruction patterns based on user requirements, integrates, checks, and ranks them, and returns the optimal result"
           ]
         }
       ]
@@ -81,28 +69,43 @@
       "title": "3. Best Practice Version",
       "subsections": [
         {
-          "title": "3.1 Private Deployment - Server Deployment Version",
+          "title": "3.1.1 Reasons for Best Practice Selection",
           "content": [
-            "**Reason for Selection as Best Practice**: This solution uses the XiYanSQL-QwenCoder model series, which is currently the open-source SOTA for NL2SQL tasks. The latest 32B parameter model XiYanSQL-QwenCoder-32B-2504, in comparison with 10+ leading NL2SQL task methods including but not limited to MCS-SQL+GPT-4o, achieved SOTA results with Execution Accuracy (EX-score) of 75.63% on the classic benchmark BIRD and EX value of 89.65% on the classic benchmark Spider Test. This solution provides steps for rapid deployment based on this model and gives the process of reproduction and testing based on the benchmark BIRD, ensuring the solution is complete and reproducible.",
-            "",
-            "**Practitioner Information**:",
-            "- Name: Real-World AI Repost and Verification",
-            "",
-            "**Original Author Information**:",
-            "- Chinese Name: Alibaba Cloud Team",
-            "- English Name: Alibaba Cloud XGenerationLab",
-            "- Author Website: https://cn.aliyun.com/product/bailian/xiyan",
-            "",
-            "**Related References**:",
-            "- XiYan-SQL (by Alibaba) Github: https://github.com/XGenerationLab/XiYan-SQL",
-            "- XiYanSQL-QwenCoder (by Alibaba) GitHub: https://github.com/XGenerationLab/XiYanSQL-QwenCoder",
-            "",
-            "**Version Status**:",
-            "- Initial Release Date: 2025-03-xx",
-            "- Last Updated: 2025-10-31",
-            "- Last Reviewed: 2025-11-09",
-            "",
-            "**Implementation Details**: [Practice Details](https://gvxnc4ekbvn.feishu.cn/wiki/MwQwwdPv6iLNX0kRgS9c2eW0ndf?from=from_copylink)"
+            "- Leading performance: XiYanSQL-QwenCoder achieved 75.63% EX on BIRD, reaching open-source SOTA.",
+            "- Strong generalization: EX reached 89.65% on Spider Test, with stable performance on complex query generation.",
+            "- Reproducible solution: Provides rapid setup steps and the BIRD evaluation process based on this model.",
+            "- Business-friendly: Natural language can generate SQL directly, significantly lowering the barrier to database operations."
+          ]
+        },
+        {
+          "title": "3.1.2 Version Information",
+          "content": [
+            "- **Version Type**: Private deployment - server deployment edition",
+            "- **Team Name**: Real-World AI republished and verified",
+            "- **Chinese Name**: Alibaba Cloud Team",
+            "- **English Name**: Alibaba Cloud XGenerationLab",
+            "- **Author Website**: https://cn.aliyun.com/product/bailian/xiyan",
+            "- **Initial Release Date**: 2025-03",
+            "- **Last Updated**: 2025-10-31",
+            "- **Last Reviewed**: 2025-11-09",
+            "- **Key Dependencies**: XiYan-SQL · XiYanSQL-QwenCoder"
+          ]
+        },
+        {
+          "title": "3.1.3 Implementation Details",
+          "content": [
+            "[Practice Details](https://gvxnc4ekbvn.feishu.cn/wiki/MwQwwdPv6iLNX0kRgS9c2eW0ndf?from=from_copylink)"
+          ]
+        },
+        {
+          "title": "3.1.4 Metrics",
+          "content": [
+            "**Core Business Metrics**",
+            "- Time to generate a single SQL script does not exceed 1 second",
+            "- Average SQL script generation accuracy reaches 95%",
+            "- Reduce labor cost by 50%",
+            "**Core Technical Metrics**",
+            "- Same as the business metrics"
           ]
         }
       ]

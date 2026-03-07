@@ -1,5 +1,5 @@
 {
-  "highlight": "待填写",
+  "highlight": "[待回填]",
   "industry": "信息技术",
   "category": "服务",
   "cycle": "2-4日",
@@ -11,10 +11,10 @@
         {
           "title": "亮点卡片",
           "content": [
-            "- 卡片1：待填写",
-            "- 卡片2：待填写",
-            "- 卡片3：待填写",
-            "- 卡片4：待填写"
+            "- [待回填]：[待回填]",
+            "- [待回填]：[待回填]",
+            "- [待回填]：[待回填]",
+            "- [待回填]：[待回填]"
           ]
         }
       ]
@@ -71,7 +71,7 @@
         {
           "title": "3.1.1 入选最佳实践理由",
           "content": [
-            "- 待填写：本方案使用NL2SQL任务目前开源SOTA的XiYanSQL-QwenCoder模型系列。该系列最新的32B参数量级模型XiYanSQL-QwenCoder-32B-2504，在与包括但不限于MCS-SQL+GPT-4o的10+现有NL2SQL任务头部方法的对比中，在经典评测集BIRD上取得执行准确率(Execution Accuracy，EX-score) 75.63%的SOTA结果、在经典测评集Spider Test上取得EX值89.65%的SOTA结果。本方案给出快速基于该模型搭建的步骤，并给出了基于评测集BIRD进行复现与跑测的过程，确保方案完整可复现。"
+            "- [待回填]：本方案使用NL2SQL任务目前开源SOTA的XiYanSQL-QwenCoder模型系列。该系列最新的32B参数量级模型XiYanSQL-QwenCoder-32B-2504，在与包括但不限于MCS-SQL+GPT-4o的10+现有NL2SQL任务头部方法的对比中，在经典评测集BIRD上取得执行准确率(Execution Accuracy，EX-score) 75.63%的SOTA结果、在经典测评集Spider Test上取得EX值89.65%的SOTA结果。本方案给出快速基于该模型搭建的步骤，并给出了基于评测集BIRD进行复现与跑测的过程，确保方案完整可复现。"
           ]
         },
         {

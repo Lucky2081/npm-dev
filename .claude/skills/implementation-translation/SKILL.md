@@ -1,9 +1,9 @@
 ---
-name: translate-implementation-en
+name: implementation-translation
 description: 读取 implementation.zh.json，翻译得到 implementation.en.json。保持 JSON 结构一致。每次处理一条数据。
 ---
 
-# Translate Implementation En
+# Implementation Translation
 
 翻译实施配置 JSON 从中文到英文。
 
@@ -93,8 +93,8 @@ description: 读取 implementation.zh.json，翻译得到 implementation.en.json
 
 ```bash
 # 调用 skill 翻译下一条
-$translate-implementation-en
+$implementation-translation
 
 # 指定 arena-folder
-$translate-implementation-en --folder 1-intelligent-research-system
+$implementation-translation --folder 1-intelligent-research-system
 ```

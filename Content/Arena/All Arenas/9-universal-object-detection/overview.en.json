@@ -1,17 +1,20 @@
 {
-  "highlight": "Build a high-precision universal object detection system demo with data flow loop and self-evolution capability in one week",
-  "industry": "Information Technology, Agriculture & Forestry, Energy & Manufacturing",
-  "category": "Operations, Management, Risk Control",
-  "cycle": "Demo Development: ≤5 Days",
+  "highlight": "Object detection accuracy exceeds 92%",
+  "industry": "Information Technology,Agriculture Forestry Animal Husbandry & Fishery,Energy & Manufacturing",
+  "category": "Operations,Management,Risk Control",
+  "cycle": "<=5 days",
   "case_no": "Case251125X02",
   "sections": [
     {
       "title": "1. Business Highlights",
       "subsections": [
         {
-          "title": "Highlights",
+          "title": "Highlight Cards",
           "content": [
-            "- Build a high-precision universal object detection system demo with data flow loop and self-evolution capability in one week"
+            "- Object detection accuracy exceeds 92%: Key targets can still be identified stably in complex backgrounds",
+            "- False-damage and false-alarm rate <=5%: Significantly lower than the traditional full-coverage mode",
+            "- P99 latency controlled within 30ms: About 15% faster than YOLOv8 and suitable for real-time operations",
+            "- Resource input saved by 50%-80%: Precise positioning replaces full-area coverage strategies"
           ]
         }
       ]
@@ -22,55 +25,44 @@
         {
           "title": "2.1 Overview",
           "content": [
-            "**Business Background**: Object detection, as a core technology of computer vision, is widely used in traffic navigation, security monitoring, medical imaging, agriculture, forestry and animal husbandry. Among them, 'complex background, tiny targets, and high similarity of interfering objects' are typical challenges faced by object detection tasks.",
-            "**Solution**: The proposed solution builds a universal object detection pipeline including image acquisition, precise recognition, and data feedback modules. Using YOLOv11 algorithm combined with Active Learning mechanism, it automatically captures low-confidence samples and triggers model iteration, solving the performance degradation problem caused by environmental changes after existing detection models go online."
+            "**Business Background**: As a core technology in computer vision, object detection is widely used in fields such as traffic navigation, security monitoring, medical imaging, agriculture, forestry, animal husbandry, and more. Among these tasks, \"complex backgrounds, tiny targets, and high similarity between interference objects\" are typical challenges.",
+            "**Solution**: The proposed solution builds a general object detection workflow containing modules such as image acquisition, precise recognition, and data feedback. It uses the YOLOv11 algorithm combined with an Active Learning mechanism to automatically capture low-confidence samples and trigger model iteration, solving the problem of performance degradation after deployment due to environmental changes."
           ]
         },
         {
           "title": "2.2 Classification Tags",
           "content": [
-            "**Industry**: Information Technology, Agriculture, Forestry & Animal Husbandry, Energy & Manufacturing",
+            "**Industry**: Information Technology, Agriculture Forestry Animal Husbandry & Fishery, Energy & Manufacturing",
             "**Category**: Operations, Management, Risk Control",
-            "**Technology**: Computer Vision (CV), Operations (Testing & Monitoring), Data Governance, MLOps"
+            "**Technology Category**: Computer Vision (CV), Operations (Testing & Monitoring), Data Governance, MLOps"
           ]
         },
         {
           "title": "2.3 Implementation Cycle",
           "content": [
-            "- Demo Development: ≤5 days"
+            "- Demo development: <=5 days"
           ]
         },
         {
           "title": "2.4 Team Composition",
           "content": [
-            "- Demo Phase: 1 Business Expert, 1 Algorithm Expert, 1 MLOps Engineer"
+            "- Demo phase: 1 business expert, 1 algorithm expert, 1 MLOps engineer"
           ]
         },
         {
           "title": "2.5 Business Pain Points",
           "content": [
-            "- High cost of full-area processing: When target objects (such as defects, weeds, specific products) only occupy 10%-30% of the area, existing solutions mostly adopt full-area coverage processing, resulting in more than 70% resource waste",
-            "- False detection of extremely similar targets: When target objects have extremely similar features to background or non-target objects (such as 'mimicry' interference), manual or existing solutions are prone to misjudgment, leading to serious business losses (such as damaging crops, missing defective products)",
-            "- Zero value of sunk data: Traditional operation processes lack data retention, massive on-site operation data (especially edge and abnormal samples) fails to be converted into data assets, seriously affecting model learning and judgment capabilities"
+            "- High cost of full-scale processing: When target objects such as defects, weeds, or specific products account for only 10%-30% of the area, existing solutions mostly use full-area coverage, causing more than 70% of resources to be wasted",
+            "- Misidentification of extremely similar targets: When target objects are highly similar to backgrounds or non-target objects such as mimetic interference objects, manual methods or existing solutions are prone to misjudgment, causing serious business losses such as damaging crops or missing defective products",
+            "- Sunk data loses its value: Traditional operations lack data retention, so massive on-site operational data, especially edge and anomalous samples, is not converted into data assets, seriously affecting the model's learning and judgment capability"
           ]
         },
         {
           "title": "2.6 Core Functions",
           "content": [
-            "- Precise target filtering: Capable of millisecond-level positioning of specified targets from large-area complex backgrounds, replacing full-coverage mode and reducing costs",
-            "- Refined hierarchical classification: Equipped with multi-level classification system, improving recognition accuracy of extremely similar interfering items and reducing usage risks",
-            "- Automatic data collection: Automatically captures high-value long-tail data backups during operation without manual intervention, accumulating data assets"
-          ]
-        },
-        {
-          "title": "2.7 Core Metrics",
-          "content": [
-            "**Core Business Metrics**:",
-            "- Save 50%-80% resource investment: Only invest resources in the precisely positioned target range (such as pesticide investment for pest areas), significantly reducing consumables and operating costs",
-            "- Long-tail sample data asset conversion rate 98%: Automatically screen and retain 'low-confidence' and 'conflicting results' long-tail difficult samples for subsequent system training upgrades, reducing invalid data accumulation occupying storage space and lowering operation and maintenance costs",
-            "- Key target false damage/false positive rate ≤5%: In high-confusion scenarios, ensure protection of non-target objects (such as normal crops), estimated to save 10~15% of total property loss",
-            "**Core Technical Metrics**:",
-            "- Average detection precision (mAP@0.5) > 92%"
+            "- Precise target filtering: Can locate designated targets in millisecond time from large-area complex backgrounds, replacing the full-coverage mode and reducing cost",
+            "- Fine-grained hierarchical classification: Uses a multi-level classification system to improve recognition accuracy for interference items with extremely similar forms and reduce usage risk",
+            "- Automatic data collection: Automatically captures high-value long-tail data backups during operations without manual intervention, accumulating data assets"
           ]
         }
       ]
@@ -79,35 +71,43 @@
       "title": "3. Best Practice Version",
       "subsections": [
         {
-          "title": "3.1 Version Information",
+          "title": "3.1.1 Reasons for Best Practice Selection",
           "content": [
-            "- Version Type: Private Deployment - Server Deployment",
-            "- Practitioner Information: Real-World AI Self-developed and Verified",
-            "- Original Author English Name: Real-World AI",
-            "- Author Website: This Site",
-            "- Related References: Ultralytics YOLO (by Ultralytics), Triton (by NVIDIA), Perf Analyzer (by NVIDIA)",
-            "- Initial Release Date: 2025-11-25",
-            "- Last Updated: 2025-11-25",
-            "- Last Reviewed: 2025-11-26"
+            "- More accurate detection: Average detection precision mAP@0.5 exceeds 92%, enabling effective recognition of tiny targets and objects in complex backgrounds.",
+            "- Lower false positives: False damage/false alarm rate for key targets <=5%, clearly better than the traditional full-coverage mode.",
+            "- Faster response: P99 inference latency is controlled within 30ms, about 15% faster than the previous-generation general model.",
+            "- More efficient resource use: The precise positioning strategy can reduce input cost for pesticides, reagents, and similar resources by 50%-80%."
           ]
         },
         {
-          "title": "3.1.2 Reasons for Best Practice Selection",
+          "title": "3.1.2 Version Information",
           "content": [
-            "**Performance Improvement**:",
-            "- The solution's average detection precision (mAP@0.5) > 92%, solving detection bottlenecks for tiny targets and complex backgrounds, enabling focus on smaller operation ranges to reduce investment costs",
-            "- The solution's key target false damage/false positive rate ≤ 5%, significantly better than traditional full-coverage mode (about 25%) in high-confusion scenarios. This improvement ensures protection of non-target objects (such as normal crops, quality products), thereby saving about 10~15% of total property loss",
-            "- In inference latency metrics, the 99th percentile response latency (P99) is controlled within 30ms, about 15% faster than the previous generation industry-standard object detection model (YOLOv8), ensuring real-time response in high-speed operation scenarios",
-            "**Cost Optimization**:",
-            "- The precise positioning strategy adopted by this solution can save about 50~80% of resources (such as pesticides, reagents) compared to the current common full-area coverage strategy",
-            "- Through automatic screening mechanism, this solution increases the long-tail valid sample data asset conversion rate to 98%, reducing about 80% of invalid data accumulation in storage space and lowering about 50% of manual cleaning, screening, and operation and maintenance costs",
-            "- Based on YOLOv11 lightweight architecture, low parameter model significantly reduces computing procurement costs (video memory not exceeding 16GB)"
+            "- **Version Type**: Private deployment - server deployment edition",
+            "- **Team Name**: Real-World AI self-developed and verified",
+            "- **Chinese Name**: /",
+            "- **English Name**: Real-World AI",
+            "- **Author Website**: This site",
+            "- **Initial Release Date**: 2025-11-25",
+            "- **Last Updated**: 2025-11-25",
+            "- **Last Reviewed**: 2025-11-26",
+            "- **Key Dependencies**: Ultralytics YOLO (by Ultralytics) · Triton (by NVIDIA) · Perf Analyzer (by NVIDIA)"
           ]
         },
         {
           "title": "3.1.3 Implementation Details",
           "content": [
-            "To be released"
+            "To be published"
+          ]
+        },
+        {
+          "title": "3.1.4 Metrics",
+          "content": [
+            "**Core Business Metrics**",
+            "- Save 50%-80% in resource input: Resources such as pesticide input are applied only to precisely localized and narrowed target areas, greatly reducing consumables and operating cost",
+            "- Long-tail sample data asset conversion rate 98%: Automatically filters and retains difficult long-tail samples such as low-confidence results and conflicting results for subsequent system training and upgrades, reducing useless data accumulation and storage occupation while lowering operations cost",
+            "- False damage/false alarm rate for key targets <=5%: In highly confusing scenarios, this protects non-target objects such as healthy crops and is estimated to prevent 10%-15% of total property loss",
+            "**Core Technical Metrics**",
+            "- Average detection precision (mAP@0.5) > 92%"
           ]
         }
       ]
